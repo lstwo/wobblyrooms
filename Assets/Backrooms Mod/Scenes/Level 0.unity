@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3632110847725111261, guid: 824eff2237885c8429f183348c3aee12, type: 3}
       propertyPath: rareness
-      value: 1000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 3632110847725111261, guid: 824eff2237885c8429f183348c3aee12, type: 3}
       propertyPath: enableRareRooms
@@ -364,6 +364,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7612004904104121224, guid: ebea124294a0d7145b051b79528256a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612004904104121225, guid: ebea124294a0d7145b051b79528256a4, type: 3}
+      propertyPath: bRagdoll
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7612004904248076588, guid: ebea124294a0d7145b051b79528256a4, type: 3}
       propertyPath: m_Name
       value: Gamemode

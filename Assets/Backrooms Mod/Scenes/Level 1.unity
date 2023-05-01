@@ -199,6 +199,7 @@ MonoBehaviour:
   worldGrid: {fileID: 1365416778}
   roomTypes:
   - {fileID: 8113418715955021008, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
+  enableRareRooms: 0
   rareRooms: []
   rareness: 0
   rareAmount: 0
@@ -271,60 +272,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebea124294a0d7145b051b79528256a4, type: 3}
---- !u!1001 &7097165542506656020
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.5984306
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.7611675
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.866957
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454359527415966743, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8113418715955021008, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
-      propertyPath: m_Name
-      value: Cube
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7a79dc4af2877514d8df5722b46697ef, type: 3}
