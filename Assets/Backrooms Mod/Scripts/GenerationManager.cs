@@ -74,6 +74,7 @@ public class GenerationManager : MonoBehaviour
                 int rot = Random.Range(0, 4) * 90;
                 Instantiate(roomTypes[Random.Range(0, roomTypes.Count)], currentPos, new Quaternion(0, rot, 0, 0),
                     worldGrid); // create the room
+                Debug.Log(rot);
             }
             
 
