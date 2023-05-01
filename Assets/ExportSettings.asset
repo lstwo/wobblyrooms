@@ -16,12 +16,12 @@ MonoBehaviour:
   exportProfiles:
   - referencePaths: []
     modName: Backrooms Mod
-    modAuthor: leshaddow2
-    modVersion: 0.1.0
+    modAuthor: leshaddow2, shadow404
+    modVersion: 0.3.0
     modDescription: 
-    modAssetPath: D:\Programms n stuff\Unity\Projects\backroomsmod\Assets\Backrooms
+    modAssetPath: D:/Programms n stuff/Unity/Projects/backroomsmod/Assets/Backrooms
       Mod
-    modExportPath: D:\Programms n stuff\Unity\Projects\backroomsmod
+    modExportPath: D:/Programms n stuff/Unity/Projects/backroomsmod
     modIcon: {fileID: 0}
   logLevel: 3
   optimizeMode: 0
@@ -29,5 +29,5 @@ MonoBehaviour:
   clearConsoleOnBuild: 1
   showOutputDirectory: 1
   buildAndRunInvokeMode: 0
-  commandLineExecutable: C:/Program Files (x86)/Steam/steamapps/common/Wobbly Life
+  commandLineExecutable: 
   remoteServer: 

@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3632110847402915209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3632110847402915222}
+  m_Layer: 0
+  m_Name: WorldGrid
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3632110847402915222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632110847402915209}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3632110847725111258}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3632110847725111260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3632110847725111258}
+  - component: {fileID: 3632110847725111261}
+  m_Layer: 0
+  m_Name: GenerationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3632110847725111258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632110847725111260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3632110847402915222}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3632110847725111261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632110847725111260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b69afdcc9c3e541b27e6ecc4e7009e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldGrid: {fileID: 3632110847402915222}
+  roomTypes:
+  - {fileID: 7026341599241230409, guid: 71c559f423d49a14c87c3fb657203083, type: 3}
+  - {fileID: 2326610789015562977, guid: 0b38ef2cb4933af4685d6a824332c67a, type: 3}
+  - {fileID: 7281345948004849939, guid: 36e72f369beea9b4285e938457b88f8e, type: 3}
+  - {fileID: 2348663545577780961, guid: a5508bfe201bb0a4eab6ec9998fabc35, type: 3}
+  - {fileID: 7133723710183097214, guid: 10dec1fae2a329a42b47a0ebe1ccf756, type: 3}
+  - {fileID: 7026341599241230409, guid: b8756763a1d638a41a8e54f17d1fa14d, type: 3}
+  - {fileID: 2326610789015562977, guid: 8aa8fecd87b1fcb4183982643358d2b3, type: 3}
+  - {fileID: 7281345948004849939, guid: 53aa20a8a2ba2c641980853877cc2aba, type: 3}
+  - {fileID: 2348663545577780961, guid: e352eb1c1b01cc64baf48245269dc101, type: 3}
+  - {fileID: 7133723710183097214, guid: c6182f1872b848244aea9acce1f71263, type: 3}
+  - {fileID: 2348663545577780961, guid: a5508bfe201bb0a4eab6ec9998fabc35, type: 3}
+  - {fileID: 2348663545577780961, guid: e352eb1c1b01cc64baf48245269dc101, type: 3}
+  - {fileID: 2348663545577780961, guid: a5508bfe201bb0a4eab6ec9998fabc35, type: 3}
+  - {fileID: 2348663545577780961, guid: e352eb1c1b01cc64baf48245269dc101, type: 3}
+  rareRooms:
+  - {fileID: 7026341599241230409, guid: 816b740aa504b41489c593bb97cb19a2, type: 3}
+  - {fileID: 2326610789015562977, guid: 23cf30f65343eef4eba63cd38f10c1c2, type: 3}
+  - {fileID: 7281345948004849939, guid: c55730b96c22b914ba7b11ef6d3d590e, type: 3}
+  - {fileID: 2348663545577780961, guid: 9c686e2b93312654c9462f54e17817cd, type: 3}
+  - {fileID: 7133723710183097214, guid: c68da48dc462f1345875e8523b7a9b88, type: 3}
+  - {fileID: 7026341599241230409, guid: 6852f364c5996934fad23237e712f759, type: 3}
+  - {fileID: 2326610789015562977, guid: 0b6802a0f3e55734c833b106478f2be4, type: 3}
+  - {fileID: 7281345948004849939, guid: 08a854d5cb1351148ab269f43357e145, type: 3}
+  - {fileID: 2348663545577780961, guid: 98ef051dd66c0c64580de26bda813888, type: 3}
+  - {fileID: 7133723710183097214, guid: 398e0ce7a06a29045b7ba0df01ada598, type: 3}
+  rareness: 700
+  rareAmount: 10
+  mapSize: 625
+  roomSize: 7
+  spawnRoom: {fileID: 7281345948004849939, guid: e197bfe9597306f428ce88e523b58c1b, type: 3}
+  exitRoom: {fileID: 7281345948004849939, guid: 74fee5d26e049ef4bbc17937c63e16da, type: 3}
