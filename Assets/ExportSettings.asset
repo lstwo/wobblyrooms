@@ -16,12 +16,12 @@ MonoBehaviour:
   exportProfiles:
   - referencePaths: []
     modName: Backrooms Mod
-    modAuthor: DefaultCompany
-    modVersion: 1.0.0
+    modAuthor: leshaddow2
+    modVersion: 0.1.0
     modDescription: 
     modAssetPath: D:\Programms n stuff\Unity\Projects\backroomsmod\Assets\Backrooms
       Mod
-    modExportPath: 
+    modExportPath: D:\Programms n stuff\Unity\Projects\backroomsmod
     modIcon: {fileID: 0}
   logLevel: 3
   optimizeMode: 0
