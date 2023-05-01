@@ -29,5 +29,5 @@ MonoBehaviour:
   clearConsoleOnBuild: 1
   showOutputDirectory: 1
   buildAndRunInvokeMode: 0
-  commandLineExecutable: 
+  commandLineExecutable: C:/Program Files (x86)/Steam/steamapps/common/Wobbly Life
   remoteServer: 
