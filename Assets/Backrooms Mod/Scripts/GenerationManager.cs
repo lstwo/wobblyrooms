@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using ModWobblyLife;
+using ModWobblyLife.Network;
 
 public enum GenerationState
 {
@@ -13,6 +14,8 @@ public enum GenerationState
 
 public class GenerationManager : MonoBehaviour
 {
+    public int seed;
+
     [Header("Config")]
     public int mapSize = 16; // amount of rooms
     public float roomSize = 7; // size of every room (room size x = 7 AND room size z = 7)
@@ -41,13 +44,13 @@ public class GenerationManager : MonoBehaviour
     private void Awake()
     {
         mapSizeSqr = (int)Mathf.Sqrt(mapSize); // get the square root of the mapSize (amount of rooms in one row)
-        GenerateWorld(); // generate the world on start
     }
 
     // generating all the rooms
     public void GenerateWorld()
     {
-        for(int i = 0; i < mapEmptyness; i++)
+        Random.InitState(42);
+        for (int i = 0; i < mapEmptyness; i++)
             roomTypes.Add(emptyRoom); // adds empty rooms to the roomtypes array
 
         int _rareAmount = rareAmount;
