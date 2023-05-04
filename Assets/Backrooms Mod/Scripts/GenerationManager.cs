@@ -81,17 +81,18 @@ public class GenerationManager : MonoBehaviour
                 }
                 else
                 {
+                    int rand = Random.Range(0, roomTypes.Count);
                     int rot = Random.Range(0, 4) * 90;
-                    Instantiate(roomTypes[Random.Range(0, roomTypes.Count)], currentPos, new Quaternion(0, rot, 0, 0),
+                    Instantiate(roomTypes[rand], currentPos, new Quaternion(0, rot, 0, 0),
                         worldGrid); // create the room
                 }
             }
             else
             {
+                int rand = Random.Range(0, roomTypes.Count);
                 int rot = Random.Range(0, 4) * 90;
-                Instantiate(roomTypes[Random.Range(0, roomTypes.Count)], currentPos, new Quaternion(0, rot, 0, 0),
+                Instantiate(roomTypes[rand], currentPos, new Quaternion(0, rot, 0, 0),
                     worldGrid); // create the room
-                Debug.Log(rot);
             }
 
             currentPosTracker++; // set the tracker to the next room

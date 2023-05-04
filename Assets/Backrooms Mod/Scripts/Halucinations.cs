@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using ModWobblyLife.Audio;
 
-
 public class Halucinations : MonoBehaviour
 {
-  
     [SerializeField] private string sound = "event:/level_0_ambience";
+    public static Halucinations Instance = new Halucinations();
+    public List<GameObject> doors = new List<GameObject>();
 
     private ModEventInstance instance;
 
     private Vector3 previousPosition;
 
     private float counter = 0;
+    private bool isHalucinating = false;
 
     void OnEnable()
     {
-        previousPosition = transform.position;
-
         if (!instance.IsValid())
         {
             if (!string.IsNullOrEmpty(sound))
@@ -42,21 +41,29 @@ public class Halucinations : MonoBehaviour
 
     void FixedUpdate()
     {
-        counter += Time.deltaTime;
-        if (instance.IsValid())
-        {
-            // Calculates the velocity instead of using Rigidbody.velocity because the client doesn't Simulate physics.
-            Vector3 velocity = (transform.position - previousPosition) / Time.fixedDeltaTime;
+        Instance.counter += Time.deltaTime;
+        Debug.Log(counter);
 
-            instance.SetParameterByName("Speed", velocity.magnitude);
-        }
-        if (counter >= Random.Range(10, 120))
+        if (!Instance.isHalucinating && Instance.counter >= Random.Range(10, 120))
         {
-            counter = -13;
-            instance.SetParameterByName("volume", counter);
+            Instance.counter = -13;
+            Instance.isHalucinating = true;
+            Debug.Log("halucination start");
         } 
-            
-        previousPosition = transform.position;
+
+        if(isHalucinating)
+        {
+            instance.SetParameterByName("volume", counter);
+            Debug.Log("halucination tick");
+        }
+
+        if(isHalucinating && counter >= 10)
+        {
+            instance.SetParameterByName("volume", -13);
+            Instance.counter = 0;
+            Instance.isHalucinating = false;
+            Debug.Log("halucination end");
+        }
     }
 }
 
