@@ -18,48 +18,48 @@ public class Halucinations : MonoBehaviour
 
     void OnEnable()
     {
-        if (!instance.IsValid())
+        if (!Instance.instance.IsValid())
         {
             if (!string.IsNullOrEmpty(sound))
             {
-                instance = ModRuntimeManager.CreateInstance(sound);
-                ModRuntimeManager.AttachInstanceToGameObject(instance, transform, (Rigidbody)null);
-                instance.Start();
+                Instance.instance = ModRuntimeManager.CreateInstance(sound);
+                ModRuntimeManager.AttachInstanceToGameObject(Instance.instance, transform, (Rigidbody)null);
+                Instance.instance.Start();
             }
         }
     }
 
     void OnDisable()
     {
-        if (instance.IsValid())
+        if (Instance.instance.IsValid())
         {
-            instance.Stop(MOD_STOP_MODE.ALLOWFADEOUT);
-            instance.Release();
-            instance.ClearHandle();
+            Instance.instance.Stop(MOD_STOP_MODE.ALLOWFADEOUT);
+            Instance.instance.Release();
+            Instance.instance.ClearHandle();
         }
     }
 
     void FixedUpdate()
     {
         Instance.counter += Time.deltaTime;
-        Debug.Log(counter);
+        Debug.Log(Instance.counter);
 
-        if (!Instance.isHalucinating && Instance.counter >= Random.Range(10, 120))
+        if (!Instance.isHalucinating && Instance.counter >= Random.Range(60, 960))
         {
             Instance.counter = -13;
             Instance.isHalucinating = true;
             Debug.Log("halucination start");
         } 
 
-        if(isHalucinating)
+        if(Instance.isHalucinating)
         {
-            instance.SetParameterByName("volume", counter);
+            Instance.instance.SetParameterByName("volume", Instance.counter);
             Debug.Log("halucination tick");
         }
 
-        if(isHalucinating && counter >= 10)
+        if(Instance.isHalucinating && Instance.counter >= 10)
         {
-            instance.SetParameterByName("volume", -13);
+            Instance.instance.SetParameterByName("volume", -13);
             Instance.counter = 0;
             Instance.isHalucinating = false;
             Debug.Log("halucination end");

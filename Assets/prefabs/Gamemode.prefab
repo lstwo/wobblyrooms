@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7612004904248076590}
-  - component: {fileID: 7612004904248076591}
+  - component: {fileID: 5958941301027785934}
   m_Layer: 0
   m_Name: Gamemode
   m_TagString: Untagged
@@ -77,7 +77,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7612004904248076591
+--- !u!114 &5958941301027785934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,9 +86,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7612004904248076588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1901564029, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
+  m_Script: {fileID: 11500000, guid: d42633e55647b1848afe0c9b5cad32f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   modPlayerControllerPrefab: {fileID: 0}
   modPlayerCharacterPrefab: {fileID: 0}
-  defaultSpawnPoint: {fileID: 7612004904104121225}
+  defaultSpawnPoint: {fileID: 0}
