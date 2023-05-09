@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1204916289566623876}
   - component: {fileID: 2014022445024575899}
   - component: {fileID: 6949222088546847561}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Pillar 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,6 +534,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3283714861444618098, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
 --- !u!4 &4308145090974973677 stripped
@@ -611,6 +615,10 @@ PrefabInstance:
     - target: {fileID: 2161054554236472667, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283714861444618098, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
