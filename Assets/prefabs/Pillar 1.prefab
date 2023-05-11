@@ -535,6 +535,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283714861444618098, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283714861444618098, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
       propertyPath: m_Intensity
       value: 1
       objectReference: {fileID: 0}
@@ -615,6 +623,14 @@ PrefabInstance:
     - target: {fileID: 2161054554236472667, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283714861444618098, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283714861444618098, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 5e87115b07387984395fc3f50bec985a, type: 3}
       propertyPath: m_Intensity

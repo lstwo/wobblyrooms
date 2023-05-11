@@ -23,6 +23,9 @@ public class DontDestroyOnLoad : MonoBehaviour
         if(SceneManager.GetActiveScene().name == inScene)
         {
             _gameObject.SetActive(true);
+        } else
+        {
+            _gameObject.SetActive(false);
         }
     }
 }
