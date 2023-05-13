@@ -21,7 +21,7 @@ MonoBehaviour:
     modDescription: 
     modAssetPath: D:/Programms n stuff/Unity/Projects/backroomsmod/Assets/Backrooms
       Mod
-    modExportPath: D:/Programms n stuff/Unity/Projects/backroomsmod
+    modExportPath: D:/
     modIcon: {fileID: 0}
   logLevel: 3
   optimizeMode: 0
