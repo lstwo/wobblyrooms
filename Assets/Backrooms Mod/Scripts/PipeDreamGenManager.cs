@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ModWobblyLife;
+using ModWobblyLife.Network;
 
 public class PipeDreamGenManager : MonoBehaviour
 {
     public Transform spawnPos;
-    public GameObject roomObj;
+    public ModNetworkBehaviour roomObj;
+    public NetworkManager networkManager;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Instantiate(roomObj, spawnPos.position, roomObj.transform.rotation);
+            ModNetworkManager.Instance.InstantiateNetworkPrefab(roomObj.gameObject, null, spawnPos.position, 
+                roomObj.transform.rotation, null, true);
             gameObject.SetActive(false);
         }
     }
