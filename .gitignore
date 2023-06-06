@@ -73,3 +73,4 @@ crashlytics-build.properties
 
 # Ignore the build because it's to big for upload lol
 Backrooms Mod.wobblymod
+Assets/ExportSettings.asset
