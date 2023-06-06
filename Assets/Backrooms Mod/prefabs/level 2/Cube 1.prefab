@@ -384,6 +384,7 @@ MonoBehaviour:
   spawnPos: {fileID: 1186755920995453132}
   roomObj: {fileID: 7037962656269045621}
   networkManager: {fileID: 0}
+  DoorDeadEnd: {fileID: 7595620359019138723, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
 --- !u!1 &1186755919981701557
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +607,7 @@ MonoBehaviour:
   spawnPos: {fileID: 1186755921080438939}
   roomObj: {fileID: 7037962656269045621}
   networkManager: {fileID: 0}
+  DoorDeadEnd: {fileID: 7595620359019138723, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
 --- !u!1 &1186755920725942464
 GameObject:
   m_ObjectHideFlags: 0
