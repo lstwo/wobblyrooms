@@ -19,9 +19,9 @@ MonoBehaviour:
     modAuthor: leshaddow2, shadow404
     modVersion: 0.3.0
     modDescription: e
-    modAssetPath: D:\Programms n stuff\Unity\Projects\backroomsmod\Assets\Backrooms
+    modAssetPath: C:/Users/zocker/Desktop/uNITY STUFF/file.404/Wobblyrooms/wobblyrooms/Assets/Backrooms
       Mod
-    modExportPath: D:\
+    modExportPath: C:/Users/zocker/Desktop/uNITY STUFF/Mod builds
     modIcon: {fileID: 0}
   logLevel: 3
   optimizeMode: 0
