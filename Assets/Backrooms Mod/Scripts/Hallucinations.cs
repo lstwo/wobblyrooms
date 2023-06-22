@@ -18,7 +18,7 @@ public class Hallucinations : MonoBehaviour
 
     void OnEnable()
     {
-        if (!Instance.instance.IsValid())
+        if (!Instance.instance.IsValid() && Settings.ambience)
         {
             if (!string.IsNullOrEmpty(sound))
             {
@@ -41,24 +41,27 @@ public class Hallucinations : MonoBehaviour
 
     void FixedUpdate()
     {
-        Instance.counter += Time.deltaTime;
-
-        if (!Instance.isHallucinating && Instance.counter >= Random.Range(60, 960))
+        if(Settings.hallucinations)
         {
-            Instance.counter = -13;
-            Instance.isHallucinating = true;
-        } 
+            Instance.counter += Time.deltaTime;
 
-        if(Instance.isHallucinating)
-        {
-            Instance.instance.SetParameterByName("volume", Instance.counter);
-        }
+            if (!Instance.isHallucinating && Instance.counter >= Random.Range(60, 960))
+            {
+                Instance.counter = -13;
+                Instance.isHallucinating = true;
+            }
 
-        if(Instance.isHallucinating && Instance.counter >= 10)
-        {
-            Instance.instance.SetParameterByName("volume", -13);
-            Instance.counter = 0;
-            Instance.isHallucinating = false;
+            if (Instance.isHallucinating)
+            {
+                Instance.instance.SetParameterByName("volume", Instance.counter);
+            }
+
+            if (Instance.isHallucinating && Instance.counter >= 10)
+            {
+                Instance.instance.SetParameterByName("volume", -13);
+                Instance.counter = 0;
+                Instance.isHallucinating = false;
+            }
         }
     }
 }

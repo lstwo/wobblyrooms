@@ -25,9 +25,16 @@ public class NetworkManager : ModNetworkBehaviour
 
     public void ServerGenSeed()
     {
-        if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
-        int seed = Random.Range(0, 3276718);
-        modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
+        if(GameSaves.GetSave(GameSaves.currentSave).seed == 0)
+        {
+            if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
+            int seed = Random.Range(0, 3276718);
+            modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
+        } else
+        {
+            if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
+            modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, GameSaves.GetSave(GameSaves.currentSave));
+        }
     }
 
     void ClientSetSeed(ModNetworkReader reader, ModRPCInfo info)
@@ -35,6 +42,13 @@ public class NetworkManager : ModNetworkBehaviour
         if (generator == null) return;
         generator.seed = reader.ReadInt32();
         generator.GenerateWorld();
+
+        if (modNetworkObject.IsServer())
+        {
+            GameSave save = GameSaves.GetSave(GameSaves.currentSave);
+            save.seed = generator.seed;
+            GameSaves.SaveGame(save, save.level, save.name, save.seed);
+        }
     }
 
     public void ServerSpawnPipeRooms(PipeDreamGenManager pdgm)

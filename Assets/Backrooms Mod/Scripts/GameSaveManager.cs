@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using ModWobblyLife.UI;
 
 public class GameSaveManager : MonoBehaviour
 {
@@ -12,22 +13,51 @@ public class GameSaveManager : MonoBehaviour
     public int saveNumber;
     public AssignLists imageAssigns;
 
+    public Text levelText;
+    public InputField nameInput;
+    public InputField seedInput;
+    public InputField levelInput;
+
     GameSave save = new GameSave("unknown_save");
 
     private void Awake()
     {
-        if (saveNumber == 1) save = GameSaver.save1; else if (saveNumber == 2) save = GameSaver.save2; else if (saveNumber == 3) save = GameSaver.save3;
+        GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
+        if (saveNumber == 1) save = GameSaves.save1; else if (saveNumber == 2) save = GameSaves.save2; else if (saveNumber == 3) save = GameSaves.save3;
         gameImage.sprite = imageAssigns.spriteList[save.level];
         gameName.text = save.name;
     }
 
-    void LoadSave()
+    public void LoadSettings()
     {
-        GameSaver.currentSave = saveNumber;
+        levelText.text = "Level: " + save.level;
+        nameInput.text = save.name;
+        seedInput.text = "" + save.seed;
+        levelInput.text = "" + save.level;
+    }
+
+    public void LoadSave()
+    {
+        GameSaves.currentSave = saveNumber;
+        GameSaves.LoadSave(save);
+    }
+
+    public void SaveSettings()
+    {
+        save.seed = int.Parse(seedInput.text);
+        save.name = nameInput.text;
+        if (imageAssigns.spriteList.Length <= int.Parse(levelInput.text))
+            save.level = 0;
+        else save.level = int.Parse(levelInput.text);
+
+        gameImage.sprite = imageAssigns.spriteList[save.level];
+        gameName.text = save.name;
+
+        GameSaves.UpdateSaveSet(save);
     }
 }
 
-public static class GameSaver
+public static class GameSaves
 {
     public static GameSave save1 = new GameSave("save_one");
     public static GameSave save2 = new GameSave("save_two");
@@ -65,6 +95,12 @@ public static class GameSaver
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
         PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
+    }
+
+    public static GameSave GetSave(int saveNumber)
+    {
+        if (saveNumber == 1) return save1; else if(saveNumber == 2) return save2; else if(saveNumber == 3) return save3;
+        else return null;
     }
 }
 
