@@ -15,4 +15,9 @@ public class SaveButton : MonoBehaviour
     {
         saveManager.SaveSettings();
     }
+
+    public void Reset()
+    {
+        saveManager.ResetSave();
+    }
 }

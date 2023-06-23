@@ -53,7 +53,19 @@ public class GameSaveManager : MonoBehaviour
         gameImage.sprite = imageAssigns.spriteList[save.level];
         gameName.text = save.name;
 
-        GameSaves.UpdateSaveSet(save);
+        GameSaves.SaveGame(GameSaves.GetSave(GameSaves.currentSave), save);
+    }
+
+    public void ResetSave()
+    {
+        save.seed = 0;
+        save.name = "Unnamed Save";
+        save.level = 0;
+
+        gameImage.sprite = imageAssigns.spriteList[save.level];
+        gameName.text = save.name;
+
+        GameSaves.SaveGame(GameSaves.GetSave(saveNumber), save);
     }
 }
 
@@ -70,6 +82,17 @@ public static class GameSaves
         save.level = level;
         save.name = name;
         save.seed = seed;
+        PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
+        PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
+        PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
+
+    }
+
+    public static void SaveGame(GameSave save, GameSave other)
+    {
+        save.level = other.level;
+        save.name = other.name;
+        save.seed = other.seed;
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
         PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
