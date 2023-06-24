@@ -9,21 +9,29 @@ using ModWobblyLife.UI;
 public class GameSaveManager : MonoBehaviour
 {
     public Image gameImage;
-    public Text gameName;
+    public TextMeshProUGUI gameName;
     public int saveNumber;
     public AssignLists imageAssigns;
 
-    public Text levelText;
-    public InputField nameInput;
-    public InputField seedInput;
-    public InputField levelInput;
+    public TextMeshProUGUI levelText;
+    public TMP_InputField nameInput;
+    public TMP_InputField seedInput;
+    public TMP_InputField levelInput;
 
     GameSave save = new GameSave("unknown_save");
 
     private void Awake()
     {
         GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
-        if (saveNumber == 1) save = GameSaves.save1; else if (saveNumber == 2) save = GameSaves.save2; else if (saveNumber == 3) save = GameSaves.save3;
+        save = GameSaves.GetSave(saveNumber);
+        gameImage.sprite = imageAssigns.spriteList[save.level];
+        gameName.text = save.name;
+    }
+
+    private void OnEnable()
+    {
+        GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
+        save = GameSaves.GetSave(saveNumber);
         gameImage.sprite = imageAssigns.spriteList[save.level];
         gameName.text = save.name;
     }
@@ -53,7 +61,7 @@ public class GameSaveManager : MonoBehaviour
         gameImage.sprite = imageAssigns.spriteList[save.level];
         gameName.text = save.name;
 
-        GameSaves.SaveGame(GameSaves.GetSave(GameSaves.currentSave), save);
+        GameSaves.SaveGame(GameSaves.GetSave(saveNumber), save);
     }
 
     public void ResetSave()
@@ -85,7 +93,6 @@ public static class GameSaves
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
         PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
-
     }
 
     public static void SaveGame(GameSave save, GameSave other)
