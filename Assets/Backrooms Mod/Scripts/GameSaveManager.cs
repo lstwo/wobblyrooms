@@ -17,6 +17,7 @@ public class GameSaveManager : MonoBehaviour
     public TMP_InputField nameInput;
     public TMP_InputField seedInput;
     public TMP_InputField levelInput;
+    public SaveButton saveButton;
 
     GameSave save = new GameSave("unknown_save");
 
@@ -42,6 +43,7 @@ public class GameSaveManager : MonoBehaviour
         nameInput.text = save.name;
         seedInput.text = "" + save.seed;
         levelInput.text = "" + save.level;
+        saveButton.saveManager = this;
     }
 
     public void LoadSave()
