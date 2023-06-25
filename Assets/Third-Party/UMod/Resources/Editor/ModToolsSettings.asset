@@ -15,14 +15,14 @@ MonoBehaviour:
   toolsIconSmall: {fileID: 2800000, guid: 319d88d8731a0f741b379cd97716a559, type: 3}
   toolsIconLarge: {fileID: 2800000, guid: 0d5d6d1529512e24a8bd0b3da38ab942, type: 3}
   toolsName: Wobbly Life Mod Tools
-  toolsVersion: 0.1.0
+  toolsVersion: 0.1.1
   firstRunWindow:
     assemblyQualifiedName: 
   developerName: RubberBandGames
   syncDeveloperName: 1
   gameName: Wobbly Life
   syncGameName: 1
-  gameVersion: 0.9.0.0
+  gameVersion: 0.9.0.1
   syncGameVersion: 1
   modFileExtension: .wobblymod
   commandLineLaunchFormat: +mod=$PATH
