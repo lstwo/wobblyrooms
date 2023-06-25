@@ -13,15 +13,18 @@ public class PipeDreamGenManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger");
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Gen");
             ModNetworkManager.Instance.InstantiateNetworkPrefab(roomObj.gameObject, null, spawnPos.position, 
                 roomObj.transform.rotation, null, true);
-            if (Random.Range(0, 10)== 1)
+            if (Random.Range(0, 10) == 1)
             {
+                Debug.Log("Door");
                 ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorDeadEnd.gameObject, null, spawnPos.position,
                 DoorDeadEnd.transform.rotation, null, true);
-            } 
+            }
             gameObject.SetActive(false);
         }
     }

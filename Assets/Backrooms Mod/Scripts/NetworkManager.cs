@@ -33,7 +33,7 @@ public class NetworkManager : ModNetworkBehaviour
         } else
         {
             if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
-            modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, GameSaves.GetSave(GameSaves.currentSave));
+            modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, GameSaves.GetSave(GameSaves.currentSave).seed);
         }
     }
 
