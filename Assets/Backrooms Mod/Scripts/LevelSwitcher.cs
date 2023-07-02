@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class LevelSwitcher : MonoBehaviour
 {
     public int level;
+    public NetworkManager networkManager;
 
     private void OnTriggerEnter(Collider other)
     {
-        GameSaves.SaveGame(GameSaves.GetSave(GameSaves.currentSave), level, GameSaves.GetSave(GameSaves.currentSave).name, GameSaves.GetSave(GameSaves.currentSave).seed);
-        SceneManager.LoadScene("Level " + level);
+        networkManager.ServerLoadScene(level);
     }
 }

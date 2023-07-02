@@ -1494,6 +1494,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6540907111708714838, guid: 9e756757cc074ba46946ec75afc698de, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540907111708714839, guid: 9e756757cc074ba46946ec75afc698de, type: 3}
+      propertyPath: preLoadBanks.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6540907111708714856, guid: 9e756757cc074ba46946ec75afc698de, type: 3}
@@ -3235,6 +3239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  networkManager: {fileID: 0}
 --- !u!114 &1145533727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18479,6 +18484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  networkManager: {fileID: 0}
 --- !u!114 &2145532031
 MonoBehaviour:
   m_ObjectHideFlags: 0

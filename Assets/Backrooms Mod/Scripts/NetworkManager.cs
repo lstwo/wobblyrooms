@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ModWobblyLife.Network;
+using UnityEngine.SceneManagement;
 
 public class NetworkManager : ModNetworkBehaviour
 {
     private byte GENERATOR_SEED;
-    private byte SPAWN_PIPEROOMS;
+    private byte LOAD_SCENE;
 
     public GameObject pipeRoomPrefab;
     public PipeDreamGenManager pipeDreamGenManager;
@@ -18,21 +19,20 @@ public class NetworkManager : ModNetworkBehaviour
         base.ModRegisterRPCs(modNetworkObject);
 
         GENERATOR_SEED = modNetworkObject.RegisterRPC(ClientSetSeed);
-        SPAWN_PIPEROOMS = modNetworkObject.RegisterRPC(ClientSpawnPipeRooms);
+        LOAD_SCENE = modNetworkObject.RegisterRPC(ClientLoadScene);
 
         ServerGenSeed();
     }
 
     public void ServerGenSeed()
     {
-        if(GameSaves.GetSave(GameSaves.currentSave).seed == 0)
+        if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
+        if (GameSaves.GetSave(GameSaves.currentSave).seed == 0)
         {
-            if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
             int seed = Random.Range(0, 3276718);
             modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
         } else
         {
-            if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
             modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, GameSaves.GetSave(GameSaves.currentSave).seed);
         }
     }
@@ -51,13 +51,16 @@ public class NetworkManager : ModNetworkBehaviour
         }
     }
 
-    public void ServerSpawnPipeRooms(PipeDreamGenManager pdgm)
+    public void ServerLoadScene(int level)
     {
-
+        if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
+        string sceneName = "Level " + level;
+        GameSaves.SaveGame(GameSaves.GetSave(GameSaves.currentSave), level, GameSaves.GetSave(GameSaves.currentSave).name, GameSaves.GetSave(GameSaves.currentSave).seed);
+        modNetworkObject.SendRPC(LOAD_SCENE, ModRPCRecievers.All, sceneName);
     }
-
-    void ClientSpawnPipeRooms(ModNetworkReader reader, ModRPCInfo info)
+    
+    void ClientLoadScene(ModNetworkReader reader, ModRPCInfo info)
     {
-
+        SceneManager.LoadScene(reader.ReadString());
     }
 }
