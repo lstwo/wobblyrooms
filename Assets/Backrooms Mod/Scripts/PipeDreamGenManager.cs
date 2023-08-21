@@ -8,7 +8,7 @@ public class PipeDreamGenManager : MonoBehaviour
 {
     public GameObject hallwaySegmentPrefab;
     public Transform playerTransform;
-    public int maxSegmentsInMemory = 3;
+    public int maxSegmentsInMemory = 10;
     public Transform premadeSegmentEnd;
     public Transform premadeSegmentStart;
 
@@ -26,6 +26,7 @@ public class PipeDreamGenManager : MonoBehaviour
 
     private void Update()
     {
+        playerTransform = Gamemode.instance.playerTransform;
         ManageHallwaySegments();
     }
 
@@ -46,12 +47,13 @@ public class PipeDreamGenManager : MonoBehaviour
         if(end)
         {
             Vector3 spawnPosition = lastSegmentEnd.position;
-            GameObject newSegment = Instantiate(hallwaySegmentPrefab, spawnPosition, lastSegmentEnd.rotation, transform);
+            GameObject newSegment = Instantiate(hallwaySegmentPrefab, spawnPosition, lastSegmentEnd.rotation, transform.Find("ForwardsSpawner"));
             lastSegmentEnd = newSegment.transform.Find("End");
-        } else
+        }
+        else
         {
-            Vector3 spawnPosition = lastSegmentStart.position + lastSegmentStart.right * 10;
-            GameObject newSegment = Instantiate(hallwaySegmentPrefab, spawnPosition, lastSegmentEnd.rotation, transform);
+            Vector3 spawnPosition = lastSegmentStart.position + -lastSegmentStart.right * 10;
+            GameObject newSegment = Instantiate(hallwaySegmentPrefab, spawnPosition, lastSegmentStart.rotation, transform.Find("BackwardsSpawner"));
             lastSegmentStart = newSegment.transform.Find("Start");
         }
         
@@ -67,35 +69,15 @@ public class PipeDreamGenManager : MonoBehaviour
 
             float distanceToLastSegment = Vector3.Distance(playerTransform.position, lastSegmentEnd.position);
 
-            Renderer segmentRenderer = hallwaySegmentPrefab.transform.Find("Segment").GetComponent<Renderer>();
-            if (segmentRenderer != null && distanceToLastSegment <= maxSegmentsInMemory * 10)
+            if (distanceToLastSegment <= maxSegmentsInMemory * 10)
             {
                 GenerateNewSegment(true);
             }
 
-            float distanceToLastSegmentStart = Vector3.Distance(playerTransform.position, lastSegmentStart.position * 10);
-            if (segmentRenderer != null && distanceToLastSegment >= maxSegmentsInMemory * 10)
+            distanceToLastSegment = Vector3.Distance(playerTransform.position, lastSegmentStart.position);
+            if (distanceToLastSegment <= maxSegmentsInMemory * 10)
             {
                 GenerateNewSegment(false);
-            }
-
-            // Unload segments that are too far from the player.
-            Transform[] segments = GetComponentsInChildren<Transform>();
-            foreach (Transform segment in segments)
-            {
-                if (segment != null && segment.Find("Segment") != null)
-                {
-
-                    Renderer _segmentRenderer = segment.Find("Segment").GetComponent<Renderer>();
-                    if (segmentRenderer != null)
-                    {
-                        float distanceToSegment = Vector3.Distance(playerTransform.position, segment.position);
-                        if (distanceToSegment > maxSegmentsInMemory * _segmentRenderer.bounds.size.x)
-                        {
-                            Destroy(segment.gameObject);
-                        }
-                    }
-                }
             }
         }
     }

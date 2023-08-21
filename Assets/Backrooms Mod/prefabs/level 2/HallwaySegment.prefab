@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1706695340}
   - component: {fileID: 1706695341}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7197406721490731409}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1054,7 @@ GameObject:
   - component: {fileID: 3238652237166732231}
   - component: {fileID: 8885972256623635574}
   - component: {fileID: 4377981639518793119}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Segment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1684,7 +1684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2006681457496533560}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1876,7 +1876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3096429328445362583}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HallwaySegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}

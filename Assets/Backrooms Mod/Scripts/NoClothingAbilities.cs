@@ -15,4 +15,10 @@ public class Gamemode : ModFreemodeGamemode
         playerController.ServerSetAllowedCustomClothingAbilities(false);
         instance.playerTransform = playerController.GetPlayerTransform();
     }
+
+    protected override void OnServerPlayerDied(ModPlayerController playerController, ModPlayerCharacter playerCharacter)
+    {
+        base.OnServerPlayerDied(playerController, playerCharacter);
+        instance.playerTransform = playerController.GetPlayerTransform();
+    }
 }
