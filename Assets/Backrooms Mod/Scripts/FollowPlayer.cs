@@ -6,6 +6,7 @@ public class FollowPlayer : MonoBehaviour
 {
     void Update()
     {
-        transform.position = Gamemode.instance.playerTransform.position;
+        if(Gamemode.instance.playerTransform != null)
+            transform.position = Gamemode.instance.playerTransform.position;
     }
 }

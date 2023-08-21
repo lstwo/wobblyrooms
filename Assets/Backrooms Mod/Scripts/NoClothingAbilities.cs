@@ -13,6 +13,6 @@ public class Gamemode : ModFreemodeGamemode
         base.OnSpawnedPlayerController(playerController);
 
         playerController.ServerSetAllowedCustomClothingAbilities(false);
-        instance.playerTransform = playerController.GetPlayerCharacter().transform;
+        instance.playerTransform = playerController.GetPlayerTransform();
     }
 }
