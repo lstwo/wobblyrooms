@@ -17,7 +17,7 @@ MonoBehaviour:
   - referencePaths: []
     modName: Backrooms Mod
     modAuthor: leshaddow2, shadow404
-    modVersion: 0.4.0
+    modVersion: 0.4.1
     modDescription: e
     modAssetPath: Assets/Backrooms Mod
     modExportPath: ../
