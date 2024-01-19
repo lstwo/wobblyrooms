@@ -1,0 +1,4 @@
+repository "Wobblyrooms@lstwo@cloud"
+  path "/"
+    br "/main"
+    co "/main"

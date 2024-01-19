@@ -398,6 +398,14 @@ PrefabInstance:
       propertyPath: m_SharedVertices.Array.data[3].m_Vertices.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4397435058365094854, guid: 9af5f0ca8fb9d6e45aeef73aa10e68ba, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397435059623954514, guid: 9af5f0ca8fb9d6e45aeef73aa10e68ba, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4500565217191162840, guid: 9af5f0ca8fb9d6e45aeef73aa10e68ba, type: 3}
       propertyPath: m_Mesh
       value: 

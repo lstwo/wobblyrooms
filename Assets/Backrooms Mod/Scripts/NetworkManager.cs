@@ -12,7 +12,14 @@ public class NetworkManager : ModNetworkBehaviour
     public GameObject pipeRoomPrefab;
     public PipeDreamGenManager pipeDreamGenManager;
 
+    public static NetworkManager instance;
+
     [SerializeField] private GenerationManager generator;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     protected override void ModRegisterRPCs(ModNetworkObject modNetworkObject)
     {
@@ -29,7 +36,7 @@ public class NetworkManager : ModNetworkBehaviour
         if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
         if (GameSaves.GetSave(GameSaves.currentSave).seed == 0)
         {
-            int seed = Random.Range(0, 3276718);
+            int seed = Random.Range(0, int.MaxValue);
             modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
         } else
         {
@@ -41,9 +48,8 @@ public class NetworkManager : ModNetworkBehaviour
     {
         if (generator == null) return;
         generator.seed = reader.ReadInt32();
-        generator.GenerateWorld();
 
-        if (modNetworkObject.IsServer())
+        if (modNetworkObject != null && modNetworkObject.IsServer())
         {
             GameSave save = GameSaves.GetSave(GameSaves.currentSave);
             save.seed = generator.seed;

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{03804077-618c-4809-8e3f-461b51e530c7}">
+		<property name="assetPath">
+			<value>Backrooms Ambience. (Level 3) - Trimmed.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>296.40081632653062</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2dbaf4ad-f857-4c46-a725-91515d45b11a}</destination>
+		</relationship>
+	</object>
+</objects>

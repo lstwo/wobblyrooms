@@ -9,6 +9,6 @@ public class LevelSwitcher : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        networkManager.ServerLoadScene(level);
+        NetworkManager.instance.ServerLoadScene(level);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using ModWobblyLife;
 using ModWobblyLife.Network;
+using UnityEngine.AI;
 
 public enum GenerationState
 {
@@ -14,7 +15,7 @@ public enum GenerationState
 
 public class GenerationManager : MonoBehaviour
 {
-    public int seed;
+    public int seed = 42;
 
     [Header("Config")]
     public int mapSize = 16; // amount of rooms
@@ -26,6 +27,9 @@ public class GenerationManager : MonoBehaviour
     public int rareness = 25; // how rare they are (higher = rarer)
     public int rareAmount = 10; // how many to spawn in one area
     public GenerationState currentState; // current state of generation
+    public NavMeshSurface surface;
+    public List<NavMeshAgent> agents = new List<NavMeshAgent>();
+    public GameObject moncher;
 
     [Header("Rooms")]
     public List<GameObject> roomTypes; // prefab of the rooms
@@ -41,15 +45,20 @@ public class GenerationManager : MonoBehaviour
     private int currentPosTracker; // current room in the row (4 = 4th room in that row)
 
     // called when gameObject gets activated (first frame)
-    private void Awake()
+    private void Start()
     {
         mapSizeSqr = (int)Mathf.Sqrt(mapSize); // get the square root of the mapSize (amount of rooms in one row)
+        GenerateWorld();
+        if(surface != null) surface.BuildNavMesh();
+
+        foreach(NavMeshAgent agent in agents)
+            agent.gameObject.SetActive(true);
     }
 
     // generating all the rooms
     public void GenerateWorld()
     {
-        Random.InitState(42);
+        Random.InitState(seed);
         for (int i = 0; i < mapEmptyness; i++)
             roomTypes.Add(emptyRoom); // adds empty rooms to the roomtypes array
 
@@ -95,9 +104,19 @@ public class GenerationManager : MonoBehaviour
                     worldGrid); // create the room
             }
 
+            if(surface != null)
+            {
+                if(Random.Range(0, 128) == 1)
+                {
+                    GameObject go = Instantiate(moncher, currentPos, moncher.transform.rotation);
+                    agents.Add(go.transform.Find("level_3_moncher (1)").GetComponent<NavMeshAgent>());
+                }
+            }
+
             currentPosTracker++; // set the tracker to the next room
             currentPosX += roomSize; // move to current x position to next to the last room
         }
+
     }
 
     // reload the scene to generate new

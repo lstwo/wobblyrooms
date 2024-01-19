@@ -17,13 +17,13 @@ MonoBehaviour:
   - referencePaths: []
     modName: Backrooms Mod
     modAuthor: leshaddow2, shadow404
-    modVersion: 0.3.0
+    modVersion: 0.4.0
     modDescription: e
     modAssetPath: Assets/Backrooms Mod
     modExportPath: ../
     modIcon: {fileID: 0}
   logLevel: 3
-  optimizeMode: 0
+  optimizeMode: 1
   compressionLevel: 2
   clearConsoleOnBuild: 1
   showOutputDirectory: 1

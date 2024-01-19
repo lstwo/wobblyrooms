@@ -20,7 +20,7 @@ public class EntitySpawner : MonoBehaviour
     {
         Debug.Log("count");
         counter += Time.deltaTime;
-        if (counter >= Random.Range(15, 121))
+        if (counter >= Random.Range(1, 5))
         {
             Debug.Log("counter");
             if (Random.Range(0, 2) == 0)

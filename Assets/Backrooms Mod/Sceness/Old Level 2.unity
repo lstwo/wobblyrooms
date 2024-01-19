@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1136891, g: 0.14768721, b: 0.18939939, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -361,10 +361,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1086366105}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!65 &27619978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -652,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef2899545de78449a4e63ba6f23b213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entity: {fileID: 4070480388721834567, guid: a71330792677b5f4d89a26e0c8b836a9, type: 3}
+  entity: {fileID: -8897757629934649065, guid: a71330792677b5f4d89a26e0c8b836a9, type: 3}
   pipeDreams: 1
 --- !u!4 &281916149
 Transform:
@@ -681,9 +687,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   registeredBehaviours:
-  - {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
+  - {fileID: -8185982720359764867, guid: a50d1b892d4398948af2f5e2b4a4bf66, type: 3}
   - {fileID: -8897757629934649065, guid: a71330792677b5f4d89a26e0c8b836a9, type: 3}
   - {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  - {fileID: -5224187096734606977, guid: 002384b452d2aa0438c4a56a1d36c019, type: 3}
 --- !u!43 &450451133
 Mesh:
   m_ObjectHideFlags: 0
@@ -1495,10 +1502,6 @@ PrefabInstance:
     - target: {fileID: 6540907111708714838, guid: 9e756757cc074ba46946ec75afc698de, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6540907111708714839, guid: 9e756757cc074ba46946ec75afc698de, type: 3}
-      propertyPath: preLoadBanks.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6540907111708714856, guid: 9e756757cc074ba46946ec75afc698de, type: 3}
       propertyPath: m_RootOrder
@@ -17239,10 +17242,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1171356110}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!65 &1795442350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19812,10 +19821,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920230967077}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!65 &1186755919167403062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19934,10 +19949,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755919721363356}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!23 &1186755919259824596
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20076,10 +20097,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920375156911}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!1 &1186755919317851559
 GameObject:
   m_ObjectHideFlags: 0
@@ -20448,10 +20475,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920142622294}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!65 &1186755919382602038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20682,10 +20715,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920458831832}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!4 &1186755919408497865
 Transform:
   m_ObjectHideFlags: 0
@@ -22603,10 +22642,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920882542341}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!65 &1186755919790109718
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22999,10 +23044,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755919087206195}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!4 &1186755919864512593
 Transform:
   m_ObjectHideFlags: 0
@@ -23060,10 +23111,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920957856932}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!4 &1186755919865515957
 Transform:
   m_ObjectHideFlags: 0
@@ -25032,10 +25089,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920933846866}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!65 &1186755920165552178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25937,10 +26000,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920875029747}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!4 &1186755920224074641
 Transform:
   m_ObjectHideFlags: 0
@@ -25998,10 +26067,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755919172151140}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!4 &1186755920227267701
 Transform:
   m_ObjectHideFlags: 0
@@ -29019,10 +29094,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755919669931979}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!23 &1186755920770354864
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29305,10 +29386,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920292235512}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!1 &1186755920806901661
 GameObject:
   m_ObjectHideFlags: 0
@@ -30312,10 +30399,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920179543922}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!65 &1186755920956325906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30812,10 +30905,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920543846287}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!4 &1186755921126011117
 Transform:
   m_ObjectHideFlags: 0
@@ -31031,10 +31130,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae82ad88c7479d43a0d4427f2ef23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 1186755920057632257}
-  roomObj: {fileID: 7037962656269045621, guid: ad5f6e9584487ab4ab2159430c2c465b, type: 3}
-  networkManager: {fileID: 7153739545020787886}
-  DoorDeadEnd: {fileID: 5074102569582708036, guid: c09454fb66aca22478a0989be6c555e0, type: 3}
+  hallwaySegmentPrefab: {fileID: 0}
+  playerTransform: {fileID: 0}
+  maxSegmentsInMemory: 10
+  premadeSegmentEnd: {fileID: 0}
+  premadeSegmentStart: {fileID: 0}
+  moncherPrefabEnd: {fileID: 0}
+  moncherPrefabStart: {fileID: 0}
+  moncherChance: 0
+  DoorWorking: {fileID: 0}
+  DoorClosed: {fileID: 0}
 --- !u!65 &1186755921150563602
 BoxCollider:
   m_ObjectHideFlags: 0
