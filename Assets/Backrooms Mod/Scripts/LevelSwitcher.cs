@@ -1,13 +1,14 @@
+using ModWobblyLife;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class LevelSwitcher : MonoBehaviour
+public class LevelSwitcher : ModActionInteract
 {
     public int level;
     public NetworkManager networkManager;
 
-    private void OnTriggerEnter(Collider other)
+    protected override void OnInteract(ModPlayerController playerController)
     {
         NetworkManager.instance.ServerLoadScene(level);
     }

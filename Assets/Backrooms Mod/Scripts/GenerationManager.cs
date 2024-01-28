@@ -6,13 +6,6 @@ using ModWobblyLife;
 using ModWobblyLife.Network;
 using UnityEngine.AI;
 
-public enum GenerationState
-{
-    Idle,
-    Rooms,
-    Lights
-}
-
 public class GenerationManager : MonoBehaviour
 {
     public int seed = 42;
@@ -26,7 +19,6 @@ public class GenerationManager : MonoBehaviour
     public bool enableRareRooms; // whether to allow for rare rooms to spawn
     public int rareness = 25; // how rare they are (higher = rarer)
     public int rareAmount = 10; // how many to spawn in one area
-    public GenerationState currentState; // current state of generation
     public NavMeshSurface surface;
     public List<NavMeshAgent> agents = new List<NavMeshAgent>();
     public GameObject moncher;
@@ -58,6 +50,8 @@ public class GenerationManager : MonoBehaviour
     // generating all the rooms
     public void GenerateWorld()
     {
+        if (!ModNetworkManager.Instance.IsServer()) return;
+
         Random.InitState(seed);
         for (int i = 0; i < mapEmptyness; i++)
             roomTypes.Add(emptyRoom); // adds empty rooms to the roomtypes array
@@ -80,8 +74,8 @@ public class GenerationManager : MonoBehaviour
                 if (Random.Range(0, rareness) == rareness-1 || _rareAmount != rareAmount)
                 {
                     int rot = Random.Range(0, 4) * 90;
-                    Instantiate(rareRooms[Random.Range(0, rareRooms.Count)], currentPos, new Quaternion(0, rot, 0, 0),
-                        worldGrid); // generating the rare room for rareAmount times
+                    ModNetworkManager.Instance.InstantiateNetworkPrefab(rareRooms[Random.Range(0, rareRooms.Count)], (go) => go.transform.SetParent(worldGrid), currentPos, 
+                        new Quaternion(0, rot, 0, 0)); // generating the rare room for rareAmount times
 
                     _rareAmount--; // counting down to indicate that one has been generated
 
@@ -92,24 +86,22 @@ public class GenerationManager : MonoBehaviour
                 {
                     int rand = Random.Range(0, roomTypes.Count);
                     int rot = Random.Range(0, 4) * 90;
-                    Instantiate(roomTypes[rand], currentPos, new Quaternion(0, rot, 0, 0),
-                        worldGrid); // create the room
+                    ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, new Quaternion(0, rot, 0, 0)); // create the room
                 }
             }
             else
             {
                 int rand = Random.Range(0, roomTypes.Count);
                 int rot = Random.Range(0, 4) * 90;
-                Instantiate(roomTypes[rand], currentPos, new Quaternion(0, rot, 0, 0),
-                    worldGrid); // create the room
+                ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, new Quaternion(0, rot, 0, 0)); // create the room
             }
 
             if(surface != null)
             {
-                if(Random.Range(0, 128) == 1)
+                if(Random.Range(0, 176) == 1)
                 {
-                    GameObject go = Instantiate(moncher, currentPos, moncher.transform.rotation);
-                    agents.Add(go.transform.Find("level_3_moncher (1)").GetComponent<NavMeshAgent>());
+                    ModNetworkManager.Instance.InstantiateNetworkPrefab(moncher, (go) => agents.Add(go.transform.Find("level_3_moncher (1)").GetComponent<NavMeshAgent>()), 
+                        currentPos, moncher.transform.rotation);
                 }
             }
 
@@ -117,11 +109,5 @@ public class GenerationManager : MonoBehaviour
             currentPosX += roomSize; // move to current x position to next to the last room
         }
 
-    }
-
-    // reload the scene to generate new
-    public void ReloadWorld()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // reloading the scene
     }
 }

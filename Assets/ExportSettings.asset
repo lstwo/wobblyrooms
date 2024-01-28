@@ -16,14 +16,14 @@ MonoBehaviour:
   exportProfiles:
   - referencePaths: []
     modName: Backrooms Mod
-    modAuthor: leshaddow2, shadow404
-    modVersion: 0.4.1
-    modDescription: e
-    modAssetPath: Assets/Backrooms Mod
+    modAuthor: LESHADDOW2, Shadow404
+    modVersion: 0.5.0
+    modDescription: 
+    modAssetPath: Assets\Backrooms Mod
     modExportPath: ../
     modIcon: {fileID: 0}
   logLevel: 3
-  optimizeMode: 1
+  optimizeMode: 0
   compressionLevel: 2
   clearConsoleOnBuild: 1
   showOutputDirectory: 1
