@@ -77,6 +77,6 @@ public class NetworkManager : ModNetworkBehaviour
     
     void ClientLoadScene(ModNetworkReader reader, ModRPCInfo info)
     {
-        SceneManager.LoadScene(reader.ReadString());
+        ModScenes.Load(reader.ReadString());
     }
 }
