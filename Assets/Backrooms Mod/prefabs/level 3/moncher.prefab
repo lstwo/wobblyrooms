@@ -540,6 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3401333929508173877}
   - component: {fileID: 4813973010255631404}
+  - component: {fileID: 6344584686138646641}
   m_Layer: 0
   m_Name: moncher
   m_TagString: Untagged
@@ -576,6 +577,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetID: f04ef1204cc3f124888a0a0c0c2e9250
+--- !u!114 &6344584686138646641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3401333929508173874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1635262877, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCompression: 1
+  bUseChildTransformPositionCompression: 0
+  networkPriory: 2
+  mainTransformSyncSetting:
+    settings:
+      bSyncPosition: 1
+      bSyncRotation: 1
+      bSyncScale: 0
+  externalTransformsToSync: []
 --- !u!1 &3401333930919115626
 GameObject:
   m_ObjectHideFlags: 0

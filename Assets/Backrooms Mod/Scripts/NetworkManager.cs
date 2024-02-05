@@ -48,14 +48,15 @@ public class NetworkManager : ModNetworkBehaviour
         if (generator != null)
             generator.seed = reader.ReadInt32();
 
+        Random.InitState(reader.ReadInt32());
+
         if (modNetworkObject != null && modNetworkObject.IsServer())
         {
             GameSave save = GameSaves.GetSave(GameSaves.currentSave);
-            save.seed = generator.seed;
+            save.seed = Random.seed;
             GameSaves.SaveGame(save, save.level, save.name, save.seed);
         }
 
-        Random.InitState(reader.ReadInt32());
 
         Debug.Log("loggg");
 

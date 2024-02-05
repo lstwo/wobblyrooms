@@ -814,7 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: -196077913, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetID: 
+  assetID: da56c0abc5f617f4eae8aa6856e963c3
 --- !u!1 &3186897761588935113
 GameObject:
   m_ObjectHideFlags: 0

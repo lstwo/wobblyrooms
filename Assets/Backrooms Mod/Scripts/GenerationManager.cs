@@ -45,6 +45,11 @@ public class GenerationManager : ModNetworkBehaviour
     // generating all the rooms
     public void GenerateWorld()
     {
+        foreach(GameObject go in roomTypes)
+        {
+            ModNetworkManager.Instance.RegisterBehaviour(go.GetComponent<ModNetworkBehaviour>());
+        }
+
         if (!ModNetworkManager.Instance.IsServer()) return;
 
         for (int i = 0; i < mapEmptyness; i++)

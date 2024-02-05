@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: -196077913, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetID: 
+  assetID: 5f8135e987966b34cbc2a86931049f2b
 --- !u!1 &8102780954267066695
 GameObject:
   m_ObjectHideFlags: 0
