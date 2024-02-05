@@ -1876,6 +1876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3096429328445362583}
+  - component: {fileID: -5417313521411238213}
   m_Layer: 12
   m_Name: HallwaySegment
   m_TagString: Untagged
@@ -1900,3 +1901,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5417313521411238213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011024750763990936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -196077913, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetID: 86d26a167efd9694a9c1d101b61c019a

@@ -10,7 +10,7 @@ public class NetworkManager : ModNetworkBehaviour
     private byte LOAD_SCENE;
 
     public GameObject pipeRoomPrefab;
-    public PipeDreamGenManager pipeDreamGenManager;
+    public Level2GenManager pipeDreamGenManager;
 
     public static NetworkManager instance;
 
@@ -21,39 +21,48 @@ public class NetworkManager : ModNetworkBehaviour
         instance = this;
     }
 
+    protected override void ModNetworkStart(ModNetworkObject modNetworkObject)
+    {
+        base.ModNetworkStart(modNetworkObject);
+        instance.ServerGenSeed();
+    }
+
     protected override void ModRegisterRPCs(ModNetworkObject modNetworkObject)
     {
         base.ModRegisterRPCs(modNetworkObject);
 
         GENERATOR_SEED = modNetworkObject.RegisterRPC(ClientSetSeed);
         LOAD_SCENE = modNetworkObject.RegisterRPC(ClientLoadScene);
-
-        ServerGenSeed();
     }
 
     public void ServerGenSeed()
     {
         if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
-        if (GameSaves.GetSave(GameSaves.currentSave).seed == 0)
-        {
-            int seed = Random.Range(0, int.MaxValue);
-            modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
-        } else
-        {
-            modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, GameSaves.GetSave(GameSaves.currentSave).seed);
-        }
+        Debug.Log("logg");
+        int seed = Random.Range(0, int.MaxValue);
+        modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
     }
 
     void ClientSetSeed(ModNetworkReader reader, ModRPCInfo info)
     {
-        if (generator == null) return;
-        generator.seed = reader.ReadInt32();
+        if (generator != null)
+            generator.seed = reader.ReadInt32();
 
         if (modNetworkObject != null && modNetworkObject.IsServer())
         {
             GameSave save = GameSaves.GetSave(GameSaves.currentSave);
             save.seed = generator.seed;
             GameSaves.SaveGame(save, save.level, save.name, save.seed);
+        }
+
+        Random.InitState(reader.ReadInt32());
+
+        Debug.Log("loggg");
+
+        if (generator != null)
+        {
+            generator.GenerateWorld();
+            Debug.Log("logggg");
         }
     }
 

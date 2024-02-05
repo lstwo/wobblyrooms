@@ -1,11 +1,24 @@
+using ModWobblyLife;
+using ModWobblyLife.Network;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyJumpscare : MonoBehaviour
+public class EnemyJumpscare : ModNetworkBehaviour
 {
+    bool activated = false;
+
     public GameObject jumpscare;
+
+    private byte RPC_JUMPSCARE;
+
+    protected override void ModRegisterRPCs(ModNetworkObject modNetworkObject)
+    {
+        base.ModRegisterRPCs(modNetworkObject);
+
+        RPC_JUMPSCARE = modNetworkObject.RegisterRPC(ClientJumpscare);
+    }
 
     private void Start()
     {
@@ -21,18 +34,24 @@ public class EnemyJumpscare : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!Gamemode.instance.jumpscares) return;
-        if(other.tag == "Player")
+        if (!Gamemode.instance.jumpscares || modNetworkObject == null || !modNetworkObject.IsServer()) return;
+        if(other.tag == "Player" && !activated)
         {
-            jumpscare.SetActive(true);
-            StartCoroutine(ResetJumpscare());
+            activated = true;
+            modNetworkObject.SendRPC(RPC_JUMPSCARE, other.GetComponentInParent<ModPlayerCharacter>().modNetworkObject.GetOwner());
         }
+    }
+
+    void ClientJumpscare(ModNetworkReader reader, ModRPCInfo info)
+    {
+        jumpscare.SetActive(true);
+        StartCoroutine(ResetJumpscare());
     }
 
     IEnumerator ResetJumpscare()
     {
         yield return new WaitForSeconds(0.3175f);
-        jumpscare.SetActive(false);
         Destroy(gameObject);
+        jumpscare.SetActive(false);
     }
 }

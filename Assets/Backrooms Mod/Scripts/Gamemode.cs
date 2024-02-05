@@ -59,7 +59,6 @@ public class Gamemode : ModFreemodeGamemode
         playerController.ServerSetAllowedCustomClothingAbilities(false);
         instance.playerTransform = playerController.GetPlayerTransform();
         playerController.onPlayerCharacterSpawned += ResetPlayerTransform;
-        playerController.SetAllowedToRespawn(false);
     }
 
     void ResetPlayerTransform(ModPlayerController controller, ModPlayerCharacter playerCharacter)
@@ -72,5 +71,4 @@ public class Gamemode : ModFreemodeGamemode
         base.OnSpawnedPlayerCharacter(playerController, playerCharacter);
         instance.playerTransform = playerCharacter.transform;
     }
-
 }

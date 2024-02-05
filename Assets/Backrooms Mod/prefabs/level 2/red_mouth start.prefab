@@ -232,7 +232,6 @@ GameObject:
   - component: {fileID: 1894279048917540999}
   - component: {fileID: 323043169189896660}
   - component: {fileID: -2760776184445810233}
-  - component: {fileID: -5224187096734606977}
   m_Layer: 0
   m_Name: red_mouth start
   m_TagString: Untagged
@@ -317,20 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb674a5095015ed45b99dfdf31b4babb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpscare: {fileID: 0}
---- !u!114 &-5224187096734606977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894279048917540998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -196077913, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   assetID: 002384b452d2aa0438c4a56a1d36c019
+  jumpscare: {fileID: 0}
 --- !u!1 &2091040905141088179
 GameObject:
   m_ObjectHideFlags: 0
