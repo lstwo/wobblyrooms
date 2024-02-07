@@ -38,7 +38,6 @@ public class NetworkManager : ModNetworkBehaviour
     public void ServerGenSeed()
     {
         if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
-        Debug.Log("logg");
         int seed = Random.Range(0, int.MaxValue);
         modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
     }
@@ -57,19 +56,16 @@ public class NetworkManager : ModNetworkBehaviour
             GameSaves.SaveGame(save, save.level, save.name, save.seed);
         }
 
-
-        Debug.Log("loggg");
-
         if (generator != null)
         {
-            generator.GenerateWorld();
-            Debug.Log("logggg");
+            StartCoroutine(generator.GenerateWorld());
         }
     }
 
     public void ServerLoadScene(int level)
     {
-        if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
+        Debug.Log(modNetworkObject.IsServer());
+        if (modNetworkObject == null) return;
         string sceneName = "Level " + level;
         GameSaves.SaveGame(GameSaves.GetSave(GameSaves.currentSave), level, GameSaves.GetSave(GameSaves.currentSave).name, GameSaves.GetSave(GameSaves.currentSave).seed);
         modNetworkObject.SendRPC(LOAD_SCENE, ModRPCRecievers.All, sceneName);

@@ -6,14 +6,22 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
+    public static ModPlayerController playerController;
+
+    private void Start()
+    {
+        ModPlayerController[] controllers = ModInstance.Instance.GetModPlayerControllers();
+
+        foreach (ModPlayerController controller in controllers) if (controller.modNetworkObject.IsOwner()) playerController = controller;
+    }
+
     void Update()
     {
         ModPlayerController[] controllers = ModInstance.Instance.GetModPlayerControllers();
-        ModPlayerController pc = null;
 
-        foreach (ModPlayerController controller in controllers) if(controller.modNetworkObject.IsOwner()) pc = controller;
+        foreach (ModPlayerController controller in controllers) if(controller.modNetworkObject.IsOwner()) playerController = controller;
 
-        if (pc != null) transform.position = pc.GetPlayerTransform().position;
+        if (playerController != null) transform.position = playerController.GetPlayerTransform().position;
         else Debug.LogError("PlayerController could not be found!");
     }
 }

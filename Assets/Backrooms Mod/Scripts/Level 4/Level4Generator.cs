@@ -6,10 +6,9 @@ using ModWobblyLife.Network;
 
 public class Level4Generator : MonoBehaviour
 {
+    public GameObject hallwaySegmentPrefab;
     public static List<Transform> playerTransforms = new List<Transform>();
     public static ModPlayerController[] playerControllers;
-
-    public GameObject hallwaySegmentPrefab;
     public int maxSegmentsInMemory = 10;
     public Transform premadeSegmentEnd;
     public Transform premadeSegmentStart;
@@ -28,22 +27,27 @@ public class Level4Generator : MonoBehaviour
 
     private void Start()
     {
-        //playerTransform = transform;
-        playerTransforms.Clear();
-        playerControllers = ModInstance.Instance.GetModPlayerControllers();
-        foreach (ModPlayerController controller in playerControllers) playerTransforms.Add(controller.GetPlayerTransform());
+        Debug.Log(ModNetworkManager.Instance.IsServer());
+        if (!ModNetworkManager.Instance.IsServer()) return;
 
         lastSegmentEnd = premadeSegmentEnd;
         lastSegmentStart = premadeSegmentStart;
+
+        playerTransforms.Clear();
+        playerControllers = ModInstance.Instance.GetModPlayerControllers();
+        foreach (ModPlayerController controller in playerControllers) playerTransforms.Add(controller.GetPlayerTransform());
 
         StartCoroutine(StartGenerate());
     }
 
     private void Update()
     {
+        if (!ModNetworkManager.Instance.IsServer()) return;
+
         playerTransforms.Clear();
         playerControllers = ModInstance.Instance.GetModPlayerControllers();
         foreach (ModPlayerController controller in playerControllers) playerTransforms.Add(controller.GetPlayerTransform());
+
         ManageHallwaySegments();
     }
 
@@ -60,13 +64,17 @@ public class Level4Generator : MonoBehaviour
 
     private void GenerateNewSegment(bool end)
     {
+        Debug.Log("log");
         done = false;
+
 
         if(end)
         {
+            Debug.Log("logg");
             Vector3 spawnPosition = lastSegmentEnd.position;
             ModNetworkManager.Instance.InstantiateNetworkPrefab(hallwaySegmentPrefab, (go) =>
             {
+                Debug.Log("loggg");
                 go.transform.SetParent(transform.Find("ForwardsSpawner"));
 
                 if (Random.Range(0, 2) == 1)
@@ -82,9 +90,13 @@ public class Level4Generator : MonoBehaviour
         }
         else
         {
+            Debug.Log("logg");
+
+
             Vector3 spawnPosition = lastSegmentStart.position + -lastSegmentStart.up * 8;
             ModNetworkManager.Instance.InstantiateNetworkPrefab(hallwaySegmentPrefab, (go) =>
             {
+                Debug.Log("loggg");
                 go.transform.SetParent(transform.Find("BackwardsSpawner"));
 
                 if (Random.Range(0, 2) == 1)

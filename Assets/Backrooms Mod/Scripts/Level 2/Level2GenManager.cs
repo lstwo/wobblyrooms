@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using ModWobblyLife;
 using ModWobblyLife.Network;
-using System;
-using System.Transactions;
 
 public class Level2GenManager : MonoBehaviour
 {
@@ -73,24 +71,23 @@ public class Level2GenManager : MonoBehaviour
             Vector3 spawnPosition = lastSegmentEnd.position;
             ModNetworkManager.Instance.InstantiateNetworkPrefab(hallwaySegmentPrefab, (go) =>
             {
-
                 go.transform.SetParent(transform.Find("ForwardsSpawner"));
 
                 lastSegmentEnd = go.transform.Find("End");
-                if (UnityEngine.Random.Range(0, 100) == 1)
+                if (Random.Range(0, 100) == 1)
                 {
-                    if (UnityEngine.Random.Range(0, 4) == 0)
+                    if (Random.Range(0, 4) == 0)
                     {
-                        if (UnityEngine.Random.Range(0, 2) == 0)
+                        if (Random.Range(0, 2) == 0)
                             ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorWorking, null, spawnPosition, lastSegmentEnd.rotation, null, true);
                         else ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorWorking2, null, spawnPosition, lastSegmentEnd.rotation, null, true);
                     }
                     else ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorClosed, null, spawnPosition, lastSegmentEnd.rotation, null, true);
                 }
 
-                if (UnityEngine.Random.Range(0, moncherChance) == 1)
+                if (Random.Range(0, moncherChance) == 1)
                 {
-                    if (UnityEngine.Random.Range(0, 350) == 1)
+                    if (Random.Range(0, 350) == 1)
                         ModNetworkManager.Instance.InstantiateNetworkPrefab(moncherPrefabEnd, null, spawnPosition, new Quaternion(moncherPrefabEnd.transform.rotation.x, -moncherPrefabEnd.transform.rotation.y,
                             moncherPrefabEnd.transform.rotation.z, moncherPrefabEnd.transform.rotation.w), null, true);
                     else
@@ -109,11 +106,11 @@ public class Level2GenManager : MonoBehaviour
                 go.transform.SetParent(transform.Find("BackwardsSpawner"));
 
                 lastSegmentStart = go.transform.Find("Start");
-                if (UnityEngine.Random.Range(0, 100) == 1)
+                if (Random.Range(0, 100) == 1)
                 {
-                    if (UnityEngine.Random.Range(0, 4) == 0)
+                    if (Random.Range(0, 4) == 0)
                     {
-                        if (UnityEngine.Random.Range(0, 2) == 0)
+                        if (Random.Range(0, 2) == 0)
                             ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorWorking, null, spawnPosition, lastSegmentEnd.rotation, null, true);
                         else ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorWorking2, null, spawnPosition, lastSegmentEnd.rotation, null, true);
                     }
@@ -121,9 +118,9 @@ public class Level2GenManager : MonoBehaviour
                         ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorClosed, null, spawnPosition, lastSegmentStart.rotation, null, true);
                 }
 
-                if (UnityEngine.Random.Range(0, moncherChance) == 1)
+                if (Random.Range(0, moncherChance) == 1)
                 {
-                    if (UnityEngine.Random.Range(0, 350) == 1)
+                    if (Random.Range(0, 350) == 1)
                         ModNetworkManager.Instance.InstantiateNetworkPrefab(moncherPrefabStart, null, spawnPosition, new Quaternion(moncherPrefabStart.transform.rotation.x, -moncherPrefabStart.transform.rotation.y,
                             moncherPrefabStart.transform.rotation.z, moncherPrefabStart.transform.rotation.w), null, true);
                     else

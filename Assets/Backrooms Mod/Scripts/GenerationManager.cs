@@ -29,7 +29,6 @@ public class GenerationManager : ModNetworkBehaviour
     public List<GameObject> lightTypes; // prefab of the lights
     public List<GameObject> rareRooms; // rare variant of rooms
 
-
     private int mapSizeSqr; // amount of rooms in one row
     private Vector3 currentPos; // position of currently generating room
 
@@ -43,14 +42,11 @@ public class GenerationManager : ModNetworkBehaviour
     }
 
     // generating all the rooms
-    public void GenerateWorld()
+    public IEnumerator GenerateWorld()
     {
-        foreach(GameObject go in roomTypes)
-        {
-            ModNetworkManager.Instance.RegisterBehaviour(go.GetComponent<ModNetworkBehaviour>());
-        }
+        yield return null;
 
-        if (!ModNetworkManager.Instance.IsServer()) return;
+        if (!ModNetworkManager.Instance.IsServer()) yield break;
 
         for (int i = 0; i < mapEmptyness; i++)
             roomTypes.Add(emptyRoom); // adds empty rooms to the roomtypes array
@@ -97,7 +93,7 @@ public class GenerationManager : ModNetworkBehaviour
 
             if(surface != null)
             {
-                if(Random.Range(0, 176) == 1)
+                if(Random.Range(0, 178) == 1)
                 {
                     ModNetworkManager.Instance.InstantiateNetworkPrefab(moncher, (go) => agents.Add(go.transform.Find("level_3_moncher (1)").GetComponent<NavMeshAgent>()), 
                         currentPos, moncher.transform.rotation, null, true);
