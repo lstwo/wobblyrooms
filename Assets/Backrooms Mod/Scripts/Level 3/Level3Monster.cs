@@ -45,7 +45,8 @@ public class Level3Monster : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            jumpscare.SetActive(true);
+            if (Gamemode.instance.jumpscares)
+                jumpscare.SetActive(true);
             StartCoroutine(ResetJumpscare());
         }
     }

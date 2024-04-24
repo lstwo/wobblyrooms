@@ -21,12 +21,12 @@ public class Gamemode : ModFreemodeGamemode
         SceneManager.activeSceneChanged += ResetConsoleCommands;
     }
 
-    static void ChangeLevel(int level)
+    public static void ChangeLevel(int level)
     {
         NetworkManager.instance.ServerLoadScene(level);
     }
 
-    static void ResetSeed()
+    public static void ResetSeed()
     {
         int seed = UnityEngine.Random.Range(0, int.MaxValue);
         GameSaves.save1.seed = seed;
@@ -70,5 +70,20 @@ public class Gamemode : ModFreemodeGamemode
     {
         base.OnSpawnedPlayerCharacter(playerController, playerCharacter);
         instance.playerTransform = playerCharacter.transform;
+
+        /*if(playerCharacter.GetComponentInChildren<CameraFocusPlayerCharacter>())
+         {
+           GameObject go = playerCharacter.GetComponentInChildren<CameraFocusPlayerCharacter>().gameObject;
+           Destroy(playerCharacter.GetComponentInChildren<CameraFocusPlayerCharacter>());
+           go.AddComponent<CustomCamFocus>();
+           playerController.SetOwnerCameraFocus(go.GetComponent<CustomCamFocus>());
+        }*/
+    }
+    protected override void ModAwake()
+    {
+        base.ModAwake();
+
+        Debug.Log("\n   _____   _____    ______   _____    _____   _______    _____     \r\n  / ____| |  __ \\  |  ____| |  __ \\  |_   _| |__   __|  / ____|  _ \r\n | |      | |__) | | |__    | |  | |   | |      | |    | (___   (_)\r\n | |      |  _  /  |  __|   | |  | |   | |      | |     \\___ \\     \r\n | |____  | | \\ \\  | |____  | |__| |  _| |_     | |     ____) |  _ \r\n  \\_____| |_|  \\_\\ |______| |_____/  |_____|    |_|    |_____/  (_)\r\n                                                                   \r\n                                                                   \n" +
+            "\nMain: LESHADDOW2\nAdditional Help: Shadow404");
     }
 }

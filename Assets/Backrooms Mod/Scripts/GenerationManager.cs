@@ -22,6 +22,7 @@ public class GenerationManager : ModNetworkBehaviour
     public NavMeshSurface surface;
     public List<NavMeshAgent> agents = new List<NavMeshAgent>();
     public GameObject moncher;
+    public bool bUseRandomRot = true;
 
     [Header("Rooms")]
     public List<GameObject> roomTypes; // prefab of the rooms
@@ -68,9 +69,16 @@ public class GenerationManager : ModNetworkBehaviour
             {
                 if (Random.Range(0, rareness) == rareness-1 || _rareAmount != rareAmount)
                 {
-                    int rot = Random.Range(0, 4) * 90;
-                    ModNetworkManager.Instance.InstantiateNetworkPrefab(rareRooms[Random.Range(0, rareRooms.Count)], (go) => go.transform.SetParent(worldGrid), currentPos, 
-                        new Quaternion(0, rot, 0, 0), null, true); // generating the rare room for rareAmount times
+                    float rot;
+                    int room = Random.Range(0, rareRooms.Count);
+
+                    if (bUseRandomRot)
+                        rot = Random.Range(0, 4) * 90;
+                    else
+                        rot = rareRooms[room].transform.rotation.y;
+
+                    ModNetworkManager.Instance.InstantiateNetworkPrefab(rareRooms[room], (go) => go.transform.SetParent(worldGrid), currentPos, 
+                        Quaternion.Euler(0, rot, 0), null, true); // generating the rare room for rareAmount times
 
                     _rareAmount--; // counting down to indicate that one has been generated
 
@@ -80,15 +88,25 @@ public class GenerationManager : ModNetworkBehaviour
                 else
                 {
                     int rand = Random.Range(0, roomTypes.Count);
-                    int rot = Random.Range(0, 4) * 90;
-                    ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, new Quaternion(0, rot, 0, 0), null, true); // create the room
+                    float rot;
+
+                    if (bUseRandomRot)
+                        rot = Random.Range(0, 4) * 90;
+                    else
+                        rot = roomTypes[rand].transform.rotation.y;
+
+                    if (rot == 0.7071068f) rot = 90; else if (rot == 1) rot = 180; else if (rot == -0.7071068f) rot = -90f;
+
+                    Debug.Log(rot);
+
+                    ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, Quaternion.Euler(0, rot, 0), null, true); // create the room
                 }
             }
             else
             {
                 int rand = Random.Range(0, roomTypes.Count);
                 int rot = Random.Range(0, 4) * 90;
-                ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, new Quaternion(0, rot, 0, 0), null, true); // create the room
+                ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, Quaternion.Euler(0, rot, 0), null, true); // create the room
             }
 
             if(surface != null)
@@ -104,9 +122,14 @@ public class GenerationManager : ModNetworkBehaviour
             currentPosX += roomSize; // move to current x position to next to the last room
         }
 
-        if (surface != null) surface.BuildNavMesh();
+        if (surface == null && agents.Count < 1) yield break;
 
+        surface.agentTypeID = agents[0].agentTypeID;
+        surface.BuildNavMesh();
+        
         foreach (NavMeshAgent agent in agents)
+        {
             agent.gameObject.SetActive(true);
+        }
     }
 }

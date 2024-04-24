@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Ignore the build because it's to big for upload lol
 Backrooms Mod.wobblymod
+
+# Ignore th Game Assemblies
+/[Aa]ssets/GameAssemblies/*

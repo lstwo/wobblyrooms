@@ -12,7 +12,9 @@ public class FollowPlayer : MonoBehaviour
     {
         ModPlayerController[] controllers = ModInstance.Instance.GetModPlayerControllers();
 
-        foreach (ModPlayerController controller in controllers) if (controller.modNetworkObject.IsOwner()) playerController = controller;
+        foreach (ModPlayerController controller in controllers) 
+            if (controller.modNetworkObject.IsOwner()) 
+                playerController = controller;
     }
 
     void Update()
@@ -21,7 +23,8 @@ public class FollowPlayer : MonoBehaviour
 
         foreach (ModPlayerController controller in controllers) if(controller.modNetworkObject.IsOwner()) playerController = controller;
 
-        if (playerController != null) transform.position = playerController.GetPlayerTransform().position;
+        if (playerController != null) 
+            transform.position = playerController.GetPlayerTransform().position;
         else Debug.LogError("PlayerController could not be found!");
     }
 }

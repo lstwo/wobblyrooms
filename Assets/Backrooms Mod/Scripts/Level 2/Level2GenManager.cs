@@ -74,7 +74,7 @@ public class Level2GenManager : MonoBehaviour
                 go.transform.SetParent(transform.Find("ForwardsSpawner"));
 
                 lastSegmentEnd = go.transform.Find("End");
-                if (Random.Range(0, 100) == 1)
+                if (Random.Range(0, 40) == 1)
                 {
                     if (Random.Range(0, 4) == 0)
                     {
@@ -106,7 +106,7 @@ public class Level2GenManager : MonoBehaviour
                 go.transform.SetParent(transform.Find("BackwardsSpawner"));
 
                 lastSegmentStart = go.transform.Find("Start");
-                if (Random.Range(0, 100) == 1)
+                if (Random.Range(0, 40) == 1)
                 {
                     if (Random.Range(0, 4) == 0)
                     {
