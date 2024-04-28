@@ -93,7 +93,7 @@ public class Level4Generator : MonoBehaviour
             Debug.Log("logg");
 
 
-            Vector3 spawnPosition = lastSegmentStart.position + -lastSegmentStart.up * 8;
+            Vector3 spawnPosition = lastSegmentStart.position + -lastSegmentStart.up * (8*1.3f);
             ModNetworkManager.Instance.InstantiateNetworkPrefab(hallwaySegmentPrefab, (go) =>
             {
                 Debug.Log("loggg");

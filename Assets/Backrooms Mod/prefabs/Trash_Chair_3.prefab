@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 203589953527506466}
   - component: {fileID: 3854114186159679879}
   - component: {fileID: 1339934307548372301}
-  - component: {fileID: 4115180082762387564}
-  - component: {fileID: 1216941773468634558}
   m_Layer: 10
   m_Name: Trash_Chair_3
   m_TagString: Untagged
@@ -84,44 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4115180082762387564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691473342668487832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 524789975, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  assetID: 1032c98743252324892eeb303d7e6621
-  overrideImpactOneshotSound: 
-  bImpactSoundEnabled: 1
-  overrideEasyGrabTransform: {fileID: 0}
-  bEasyGrabEnabled: 0
---- !u!114 &1216941773468634558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691473342668487832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1635262877, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationCompression: 1
-  bUseChildTransformPositionCompression: 0
-  networkPriory: 2
-  mainTransformSyncSetting:
-    settings:
-      bSyncPosition: 1
-      bSyncRotation: 1
-      bSyncScale: 0
-  externalTransformsToSync: []
 --- !u!1 &4612060555518129486
 GameObject:
   m_ObjectHideFlags: 0

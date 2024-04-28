@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh377632
+  m_Name: pb_Mesh609664
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1005,6 +1005,7 @@ GameObject:
   - component: {fileID: 727722995}
   - component: {fileID: 727722994}
   - component: {fileID: 727722993}
+  - component: {fileID: 727722997}
   m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
@@ -1156,6 +1157,19 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &727722997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727722991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -837291180, guid: 6e425a0925819eb46aebbb35b36dabfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surface: 14
 --- !u!1 &1094720438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,7 +2060,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6461756628023278578, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
       propertyPath: rareness
-      value: 128
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6461756628023278578, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
       propertyPath: emptyRoom
@@ -2070,7 +2084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461756628023278578, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
       propertyPath: rareRooms.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6461756628023278578, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
       propertyPath: roomTypes.Array.size
@@ -2092,6 +2106,14 @@ PrefabInstance:
       propertyPath: rareRooms.Array.data[2]
       value: 
       objectReference: {fileID: 6385422151803050362, guid: 08e2253caa4581045aa10bb1e817b60b, type: 3}
+    - target: {fileID: 6461756628023278578, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
+      propertyPath: rareRooms.Array.data[3]
+      value: 
+      objectReference: {fileID: 6626711162701946251, guid: 59ebd8ebbc5dd5949a39cf538e9abb7a, type: 3}
+    - target: {fileID: 6461756628023278578, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
+      propertyPath: rareRooms.Array.data[4]
+      value: 
+      objectReference: {fileID: 6626711162701946251, guid: 59ebd8ebbc5dd5949a39cf538e9abb7a, type: 3}
     - target: {fileID: 6461756628023278578, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
       propertyPath: roomTypes.Array.data[0]
       value: 

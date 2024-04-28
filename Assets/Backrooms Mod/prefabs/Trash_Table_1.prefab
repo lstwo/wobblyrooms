@@ -142,10 +142,7 @@ GameObject:
   - component: {fileID: 9073427233945867392}
   - component: {fileID: 5351563242273364773}
   - component: {fileID: 7899424950269587439}
-  - component: {fileID: -3930257116928941221}
-  - component: {fileID: 5062959661498224986}
   - component: {fileID: 5459804508343970841}
-  - component: {fileID: 9057742601999764922}
   m_Layer: 10
   m_Name: Trash_Table_1
   m_TagString: Untagged
@@ -217,44 +214,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-3930257116928941221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8548000677127949882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 524789975, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  assetID: 
-  overrideImpactOneshotSound: 
-  bImpactSoundEnabled: 1
-  overrideEasyGrabTransform: {fileID: 0}
-  bEasyGrabEnabled: 0
---- !u!114 &5062959661498224986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8548000677127949882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1635262877, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationCompression: 1
-  bUseChildTransformPositionCompression: 0
-  networkPriory: 2
-  mainTransformSyncSetting:
-    settings:
-      bSyncPosition: 1
-      bSyncRotation: 1
-      bSyncScale: 0
-  externalTransformsToSync: []
 --- !u!54 &5459804508343970841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -271,16 +230,3 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9057742601999764922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8548000677127949882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef441f998d5600244a3d37f1cf85f1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyParticlePrefab: {fileID: 2748074833260581275, guid: f3d8b77c6e8152548a5a5e09a154f5d9, type: 3}

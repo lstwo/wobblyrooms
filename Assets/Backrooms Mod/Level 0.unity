@@ -195,7 +195,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh416000
+  m_Name: pb_Mesh498864
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1349,6 +1349,7 @@ GameObject:
   - component: {fileID: 880589835}
   - component: {fileID: 880589834}
   - component: {fileID: 880589833}
+  - component: {fileID: 880589838}
   m_Layer: 12
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1682,6 +1683,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880589838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880589832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -837291180, guid: 6e425a0925819eb46aebbb35b36dabfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surface: 14
 --- !u!1001 &1101043158
 PrefabInstance:
   m_ObjectHideFlags: 0
