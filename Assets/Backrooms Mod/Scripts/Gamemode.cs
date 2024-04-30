@@ -9,13 +9,12 @@ public class Gamemode : ModFreemodeGamemode
 {
     public static Gamemode instance = new Gamemode();
     public Transform playerTransform;
-    public bool jumpscares = true;
 
     private void Start()
     {
         DebugLogConsole.AddCommand("backrooms.changeLevel", "Changes the Level you are currently in.", (Action<int>)ChangeLevel, "LevelNumber");
         DebugLogConsole.AddCommand("backrooms.newSeed", "Generates a new Seed for the random generation.", ResetSeed);
-        DebugLogConsole.AddCommand("backrooms.jumpscares", "Set whether or not to use jumpscares.", (Action<bool>)SetJumpscares, "EnableJumpscares");
+        DebugLogConsole.AddCommand("backrooms.jumpscares", "Set whether or not to use jumpscares.", (Action<bool>)Settings.SetJumpscares, "EnableJumpscares");
         DebugLogConsole.AddCommand("backrooms.jumpscares", "Set whether or not to use jumpscares.", GetJumpscares);
 
         SceneManager.activeSceneChanged += ResetConsoleCommands;
@@ -33,16 +32,9 @@ public class Gamemode : ModFreemodeGamemode
         NetworkManager.instance.ServerGenSeed();
     }
 
-    static void SetJumpscares(bool b)
-    {
-        instance.jumpscares = b;
-        if(b) PlayerPrefs.SetInt("jumpscares", 1);
-        else PlayerPrefs.SetInt("jumpscares", 0);
-    }
-
     static void GetJumpscares()
     {
-        Debug.Log(instance.jumpscares);
+        Debug.Log(Settings.jumpscares);
     }
 
     static void ResetConsoleCommands(Scene a, Scene b)

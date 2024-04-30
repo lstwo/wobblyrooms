@@ -45,7 +45,7 @@ public class Level6Monster : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            if (Gamemode.instance.jumpscares)
+            if (Settings.jumpscares)
                 jumpscare.SetActive(true);
             StartCoroutine(ResetJumpscare());
         }

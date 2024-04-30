@@ -34,7 +34,7 @@ public class EnemyJumpscare : ModNetworkBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!Gamemode.instance.jumpscares || modNetworkObject == null || !modNetworkObject.IsServer()) return;
+        if (!Settings.jumpscares || modNetworkObject == null || !modNetworkObject.IsServer()) return;
         if(other.tag == "Player" && !activated)
         {
             activated = true;

@@ -41,11 +41,11 @@ public class Level3Monster : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!Gamemode.instance.jumpscares) return;
+        if (!Settings.jumpscares) return;
 
         if (other.tag == "Player")
         {
-            if (Gamemode.instance.jumpscares)
+            if (Settings.jumpscares)
                 jumpscare.SetActive(true);
             StartCoroutine(ResetJumpscare());
         }

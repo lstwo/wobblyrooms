@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using ModWobblyLife.UI;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class GameSaveManager : MonoBehaviour
 {
@@ -25,8 +26,10 @@ public class GameSaveManager : MonoBehaviour
     {
         GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
         save = GameSaves.GetSave(saveNumber);
-        gameImage.sprite = imageAssigns.spriteList[save.level];
-        gameName.text = save.name;
+        if(gameImage != null)
+            gameImage.sprite = imageAssigns.spriteList[save.level];
+        if(gameName != null)
+            gameName.text = save.name;
     }
 
     private void OnEnable()
@@ -50,6 +53,13 @@ public class GameSaveManager : MonoBehaviour
     {
         GameSaves.currentSave = saveNumber;
         GameSaves.LoadSave(save);
+    }
+
+    public void LoadFreeplay()
+    {
+        GameSaves.currentSave = saveNumber;
+        NetworkManager.instance.ServerGenSeed();
+        NetworkManager.instance.ServerLoadScene(GameSaves.GetSave(GameSaves.currentSave).level);
     }
 
     public void SaveSettings()
@@ -84,6 +94,7 @@ public static class GameSaves
     public static GameSave save1 = new GameSave("save_one");
     public static GameSave save2 = new GameSave("save_two");
     public static GameSave save3 = new GameSave("save_three");
+    public static GameSave save4 = new GameSave("save_four");
 
     public static int currentSave = 1;
 
@@ -112,7 +123,8 @@ public static class GameSaves
     {
         save.level = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_level");
         save.name = PlayerPrefs.GetString(save.pprefsKeyPrefix + "_name");
-        SceneManager.LoadScene("Level " + save.level);
+        NetworkManager.instance.ServerGenSeed();
+        NetworkManager.instance.ServerLoadScene(save.level);
     }
 
     public static void UpdateSaveGet(GameSave save)
@@ -131,7 +143,7 @@ public static class GameSaves
 
     public static GameSave GetSave(int saveNumber)
     {
-        if (saveNumber == 1) return save1; else if(saveNumber == 2) return save2; else if(saveNumber == 3) return save3;
+        if (saveNumber == 1) return save1; else if(saveNumber == 2) return save2; else if(saveNumber == 3) return save3; else if(saveNumber == 4) return save4;
         else return null;
     }
 }
