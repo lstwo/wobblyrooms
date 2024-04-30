@@ -17,6 +17,6 @@ public class SettingsManager : MonoBehaviour
 
 public static class Settings
 {
-    public static bool hallucinations;
-    public static bool ambience;
+    public static bool hallucinations = true;
+    public static bool ambience = true;
 }

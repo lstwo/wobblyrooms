@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ModWobblyLife.UI;
+using Rewired;
+using UnityEngine.InputSystem;
 
 public class MainMenuCanvas : MonoBehaviour
 {
-    public ModUIPlayerBasedCanvas ui;
-    private void Awake()
+    private void Update()
     {
-        ui.Show();
-        ui.SetCursorVisible(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
 }

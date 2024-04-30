@@ -1522,7 +1522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342989557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.9854, y: 0.875, z: 83.4836}
+  m_LocalPosition: {x: 83.9854, y: 0.3, z: 83.4836}
   m_LocalScale: {x: 35.16336, y: 1, z: 35.30288}
   m_Children:
   - {fileID: 1983754861}
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetID: 789f0322-c47b-4527-911a-e84d9612958b
-  bAutoBoxCollider: 1
+  bAutoBoxCollider: 0
   waterDepth: 1.8
   colliderMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
   waterAnchorTransform: {fileID: 1342989558}
@@ -1811,7 +1811,7 @@ GameObject:
   - component: {fileID: 1983754863}
   - component: {fileID: 1983754862}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: WaterTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2032,49 +2032,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &2003565321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2003565323}
-  - component: {fileID: 2003565322}
-  m_Layer: 0
-  m_Name: HawkNetworking.HawkNetworkManager (Singleton)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2003565322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003565321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 939699586, guid: 45039ad84e8e6e0498373f3135a368e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2003565323
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003565321}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2094562174
 GameObject:
   m_ObjectHideFlags: 0

@@ -1604,7 +1604,7 @@ MonoBehaviour:
   m_Script: {fileID: 2017680092, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEvent: event:/level_0_ambience
+  soundEvent: event:/level_6_ambience
   playEvent: 1
   stopEvent: 0
   bTriggerCue: 0
@@ -1633,11 +1633,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1350039842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7379192a44b5f642b3dfbc11e085674, type: 3}
+  m_Script: {fileID: 11500000, guid: e4ad8ac5632d67043802590733c2d1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: event:/level_0_ambience
-  doors: []
 --- !u!1 &1914112998
 GameObject:
   m_ObjectHideFlags: 0
