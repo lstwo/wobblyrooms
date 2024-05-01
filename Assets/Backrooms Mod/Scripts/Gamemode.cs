@@ -29,7 +29,7 @@ public class Gamemode : ModFreemodeGamemode
     {
         int seed = UnityEngine.Random.Range(0, int.MaxValue);
         GameSaves.save1.seed = seed;
-        NetworkManager.instance.ServerGenSeed();
+        NetworkManager.instance.ServerGenSeed(true);
     }
 
     static void GetJumpscares()

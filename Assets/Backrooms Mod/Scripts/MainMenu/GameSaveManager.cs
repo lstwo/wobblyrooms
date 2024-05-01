@@ -58,7 +58,7 @@ public class GameSaveManager : MonoBehaviour
     public void LoadFreeplay()
     {
         GameSaves.currentSave = saveNumber;
-        NetworkManager.instance.ServerGenSeed();
+        NetworkManager.instance.ServerGenSeed(true);
         NetworkManager.instance.ServerLoadScene(GameSaves.GetSave(GameSaves.currentSave).level);
     }
 
@@ -123,7 +123,7 @@ public static class GameSaves
     {
         save.level = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_level");
         save.name = PlayerPrefs.GetString(save.pprefsKeyPrefix + "_name");
-        NetworkManager.instance.ServerGenSeed();
+        NetworkManager.instance.ServerGenSeed(false);
         NetworkManager.instance.ServerLoadScene(save.level);
     }
 

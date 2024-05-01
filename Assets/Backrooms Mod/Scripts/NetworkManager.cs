@@ -24,7 +24,7 @@ public class NetworkManager : ModNetworkBehaviour
     protected override void ModNetworkStart(ModNetworkObject modNetworkObject)
     {
         base.ModNetworkStart(modNetworkObject);
-        instance.ServerGenSeed();
+        instance.ServerGenSeed(false);
     }
 
     protected override void ModRegisterRPCs(ModNetworkObject modNetworkObject)
@@ -35,10 +35,14 @@ public class NetworkManager : ModNetworkBehaviour
         LOAD_SCENE = modNetworkObject.RegisterRPC(ClientLoadScene);
     }
 
-    public void ServerGenSeed()
+    public void ServerGenSeed(bool _override)
     {
         if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
-        int seed = Random.Range(0, int.MaxValue);
+
+        int seed;
+        if (_override) seed = Random.Range(0, int.MaxValue);
+        else seed = GameSaves.GetSave(GameSaves.currentSave).seed;
+
         modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
     }
 
@@ -52,7 +56,7 @@ public class NetworkManager : ModNetworkBehaviour
         if (modNetworkObject != null && modNetworkObject.IsServer())
         {
             GameSave save = GameSaves.GetSave(GameSaves.currentSave);
-            save.seed = Random.seed;
+            save.seed = reader.ReadInt32();
             GameSaves.SaveGame(save, save.level, save.name, save.seed);
         }
 

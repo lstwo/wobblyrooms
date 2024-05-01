@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
+    public Toggle jumpscareToggle, ambienceToggle, hallucinationToggle;
+
     public void Start()
     {
         Settings.LoadSettings();
+        jumpscareToggle.isOn = Settings.jumpscares;
+        ambienceToggle.isOn = Settings.ambience;
+        hallucinationToggle.isOn = Settings.hallucinations;
     }
 
     public void setJumpscares(bool enabled)
