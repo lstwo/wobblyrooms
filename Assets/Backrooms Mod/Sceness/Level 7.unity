@@ -5163,8 +5163,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1266611012}
     - target: {fileID: 7612004904104121224, guid: ebea124294a0d7145b051b79528256a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.371
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612004904104121224, guid: ebea124294a0d7145b051b79528256a4, type: 3}
       propertyPath: m_LocalPosition.y
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612004904104121224, guid: ebea124294a0d7145b051b79528256a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.251
       objectReference: {fileID: 0}
     - target: {fileID: 7612004904104121225, guid: ebea124294a0d7145b051b79528256a4, type: 3}
       propertyPath: bRagdoll
