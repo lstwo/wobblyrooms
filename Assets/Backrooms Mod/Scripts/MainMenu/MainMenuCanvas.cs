@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ModWobblyLife.UI;
-using Rewired;
 using UnityEngine.InputSystem;
 
 public class MainMenuCanvas : MonoBehaviour
