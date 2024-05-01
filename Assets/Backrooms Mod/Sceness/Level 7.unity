@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh225308
+  m_Name: pb_Mesh519332
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -577,7 +577,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh225296
+  m_Name: pb_Mesh519320
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -796,7 +796,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db535b4b890913b43aff8b872fb5fc1b, type: 2}
+  - {fileID: 2100000, guid: 836c209558bf271469c4b66372e6dfa0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1314,7 +1314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094720438}
   m_LocalRotation: {x: -1, y: -0, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: -3.5, y: 5.5, z: 170.5}
+  m_LocalPosition: {x: -3.5, y: 4.5, z: 170.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1377580123}
@@ -1523,7 +1523,7 @@ Transform:
   m_GameObject: {fileID: 1342989557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 83.9854, y: 0.3, z: 83.4836}
-  m_LocalScale: {x: 35.16336, y: 1, z: 35.30288}
+  m_LocalScale: {x: 17.58168, y: 1, z: 17.65144}
   m_Children:
   - {fileID: 1983754861}
   m_Father: {fileID: 1377580123}
@@ -1671,7 +1671,7 @@ PrefabInstance:
     - target: {fileID: 7153739545273288201, guid: 3e0681bf8f3fbda49b5b7c8846b6724c, type: 3}
       propertyPath: generator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7767333837234249414}
     - target: {fileID: 7153739545273288202, guid: 3e0681bf8f3fbda49b5b7c8846b6724c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1736,19 +1736,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   registeredBehaviours:
-  - {fileID: 4306340293152679030, guid: 133f4f81ac2a53e419312a477896348d, type: 3}
-  - {fileID: 4306340293152679030, guid: b46c2182426e07b4d80c28f6b4b10592, type: 3}
-  - {fileID: 4306340293152679030, guid: d64368819331c2d48b9c2f54456236be, type: 3}
-  - {fileID: 4306340293152679030, guid: 83b9066e2ca7cab418e60ab469fa6806, type: 3}
-  - {fileID: 4306340293152679030, guid: f461065c4f86cd04cb081ce1cd17fc81, type: 3}
-  - {fileID: 4306340293152679030, guid: d9d73a77839ad994b81c27f20eba8ab0, type: 3}
-  - {fileID: 4306340293152679030, guid: 862e821c287544a4b9c2be7fa551eacb, type: 3}
-  - {fileID: 4306340293152679030, guid: e4cc09c736cc32446befea5aabf9adde, type: 3}
-  - {fileID: 4306340293152679030, guid: 3f2b25f7400481743b83757e0e95d9f5, type: 3}
-  - {fileID: 6427915496116357869, guid: 59ebd8ebbc5dd5949a39cf538e9abb7a, type: 3}
-  - {fileID: 4306340293152679030, guid: 74479c42a9fe9d146963bd3c2a9a9f72, type: 3}
-  - {fileID: 4306340293152679030, guid: f2680387689121346b2a49f9ba4691f0, type: 3}
-  - {fileID: 4306340293152679030, guid: 08e2253caa4581045aa10bb1e817b60b, type: 3}
+  - {fileID: 4306340293152679030, guid: f80595244bef61840bbf6a52eae36fc7, type: 3}
+  - {fileID: 4306340293152679030, guid: 1fd0f675d1fc52949b7342b47314082d, type: 3}
+  - {fileID: 4306340293152679030, guid: 9c2621970e23f654393a79acbd6dfdd7, type: 3}
+  - {fileID: 4306340293152679030, guid: d2b49dfb307da3f46a45d2d2dba7c5d3, type: 3}
+  - {fileID: 4306340293152679030, guid: 66155e95d26ad4a4e8f6dd08133b59d6, type: 3}
+  - {fileID: 4306340293152679030, guid: 88effe6f0e2cc1847b59603020ce99f9, type: 3}
 --- !u!1 &1817263087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,7 +1867,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh225320
+  m_Name: pb_Mesh519344
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2413,3 +2406,46 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6461756628023278578, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
+--- !u!1 &7767333837234249413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6461756628023278579, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
+  m_PrefabInstance: {fileID: 7767333837234249412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7767333837234249414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767333837234249413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b69afdcc9c3e541b27e6ecc4e7009e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetID: 22b9d4d7706fa714085a72673324b983
+  seed: 42
+  mapSize: 625
+  roomSize: 14
+  worldGrid: {fileID: 0}
+  mapEmptyness: 0
+  mapBrightness: 0
+  enableRareRooms: 0
+  rareness: 20
+  rareAmount: 1
+  surface: {fileID: 0}
+  agents: []
+  moncher: {fileID: 0}
+  bUseRandomRot: 0
+  roomTypes:
+  - {fileID: 6385422151803050362, guid: f80595244bef61840bbf6a52eae36fc7, type: 3}
+  - {fileID: 6385422151803050362, guid: 1fd0f675d1fc52949b7342b47314082d, type: 3}
+  - {fileID: 6385422151803050362, guid: 9c2621970e23f654393a79acbd6dfdd7, type: 3}
+  - {fileID: 6385422151803050362, guid: d2b49dfb307da3f46a45d2d2dba7c5d3, type: 3}
+  - {fileID: 6385422151803050362, guid: 66155e95d26ad4a4e8f6dd08133b59d6, type: 3}
+  - {fileID: 6385422151803050362, guid: 88effe6f0e2cc1847b59603020ce99f9, type: 3}
+  - {fileID: 6385422151803050362, guid: f80595244bef61840bbf6a52eae36fc7, type: 3}
+  - {fileID: 6385422151803050362, guid: 88effe6f0e2cc1847b59603020ce99f9, type: 3}
+  emptyRoom: {fileID: 0}
+  lightTypes: []
+  rareRooms: []

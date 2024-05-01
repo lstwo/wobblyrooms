@@ -36,8 +36,10 @@ public class GameSaveManager : MonoBehaviour
     {
         GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
         save = GameSaves.GetSave(saveNumber);
-        gameImage.sprite = imageAssigns.spriteList[save.level];
-        gameName.text = save.name;
+        if (gameImage != null)
+            gameImage.sprite = imageAssigns.spriteList[save.level];
+        if (gameName != null)
+            gameName.text = save.name;
     }
 
     public void LoadSettings()
@@ -59,7 +61,7 @@ public class GameSaveManager : MonoBehaviour
     {
         GameSaves.currentSave = saveNumber;
         NetworkManager.instance.ServerGenSeed(true);
-        NetworkManager.instance.ServerLoadScene(GameSaves.GetSave(GameSaves.currentSave).level);
+        NetworkManager.instance.ServerLoadScene(0);
     }
 
     public void SaveSettings()
