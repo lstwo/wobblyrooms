@@ -10,6 +10,15 @@ public class LevelSwitcherTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        NetworkManager.instance.ServerLoadScene(level);
+        if(Settings.enableExits)
+            NetworkManager.instance.ServerLoadScene(level);
+        else
+        {
+            ModPlayerController[] controllers = ModInstance.Instance.GetModPlayerControllers();
+
+            foreach (ModPlayerController controller in controllers)
+                if (controller.modNetworkObject.IsOwner())
+                    controller.GetPlayerCharacter().Kill();
+        }
     }
 }

@@ -1328,6 +1328,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.47
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1336,9 +1340,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1bd797a56f41c2b4b9b40e4020ef6e27, type: 2}
+    - target: {fileID: -516098083770646512, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
       propertyPath: m_Name
       value: shelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
@@ -1436,6 +1448,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1444,9 +1460,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1bd797a56f41c2b4b9b40e4020ef6e27, type: 2}
+    - target: {fileID: -516098083770646512, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
       propertyPath: m_Name
       value: shelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c4b65faecefa94aaf635e0ba55a2a5, type: 3}

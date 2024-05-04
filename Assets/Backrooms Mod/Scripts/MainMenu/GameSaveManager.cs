@@ -20,6 +20,9 @@ public class GameSaveManager : MonoBehaviour
     public TMP_InputField levelInput;
     public SaveButton saveButton;
 
+    public Toggle levelTriggerOptionFreeplay;
+    public TMP_InputField levelInputFreeplay;
+
     GameSave save = new GameSave("unknown_save");
 
     private void Awake()
@@ -53,6 +56,7 @@ public class GameSaveManager : MonoBehaviour
 
     public void LoadSave()
     {
+        Settings.enableExits = true;
         GameSaves.currentSave = saveNumber;
         GameSaves.LoadSave(save);
     }
@@ -60,8 +64,9 @@ public class GameSaveManager : MonoBehaviour
     public void LoadFreeplay()
     {
         GameSaves.currentSave = saveNumber;
+        Settings.enableExits = levelTriggerOptionFreeplay.isOn;
         NetworkManager.instance.ServerGenSeed(true);
-        NetworkManager.instance.ServerLoadScene(0);
+        NetworkManager.instance.ServerLoadScene(int.Parse(levelInputFreeplay.text));
     }
 
     public void SaveSettings()

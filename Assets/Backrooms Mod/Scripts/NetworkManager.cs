@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ModWobblyLife.Network;
 using UnityEngine.SceneManagement;
+using System;
 
 public class NetworkManager : ModNetworkBehaviour
 {
@@ -40,7 +41,7 @@ public class NetworkManager : ModNetworkBehaviour
         if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
 
         int seed;
-        if (_override) seed = Random.Range(0, int.MaxValue);
+        if (_override) seed = UnityEngine.Random.Range(0, int.MaxValue);
         else seed = GameSaves.GetSave(GameSaves.currentSave).seed;
 
         modNetworkObject.SendRPC(GENERATOR_SEED, ModRPCRecievers.All, seed);
@@ -51,7 +52,7 @@ public class NetworkManager : ModNetworkBehaviour
         if (generator != null)
             generator.seed = reader.ReadInt32();
 
-        Random.InitState(reader.ReadInt32());
+        UnityEngine.Random.InitState(reader.ReadInt32());
 
         if (modNetworkObject != null && modNetworkObject.IsServer())
         {
@@ -77,6 +78,15 @@ public class NetworkManager : ModNetworkBehaviour
     
     void ClientLoadScene(ModNetworkReader reader, ModRPCInfo info)
     {
-        ModScenes.Load(reader.ReadString());
+        try 
+        {
+            ModScenes.Load(reader.ReadString());
+        } 
+        catch(NullReferenceException e)
+        {
+            Debug.Log(reader.ReadString());
+            Debug.Log(e.StackTrace);
+            SceneManager.LoadScene(reader.ReadString());
+        }
     }
 }

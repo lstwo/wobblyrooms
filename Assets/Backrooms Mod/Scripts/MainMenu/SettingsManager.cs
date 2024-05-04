@@ -37,6 +37,8 @@ public static class Settings
     public static bool ambience = true;
     public static bool hallucinations = true;
 
+    public static bool enableExits = true;
+
     public static void LoadSettings()
     {
         jumpscares = PlayerPrefs.GetInt("jumpscares") == 0;
