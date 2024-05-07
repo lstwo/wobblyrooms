@@ -51,6 +51,7 @@ public class EnemyJumpscare : ModNetworkBehaviour
     IEnumerator ResetJumpscare()
     {
         yield return new WaitForSeconds(0.3175f);
+        Achievements.CompleteAchievement(9);
         Destroy(gameObject);
         jumpscare.SetActive(false);
     }

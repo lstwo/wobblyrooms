@@ -11,7 +11,10 @@ public class LevelSwitcherTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(Settings.enableExits)
+        {
+            Achievements.CompleteAchievement(Achievements.LevelAchievements[level].id);
             NetworkManager.instance.ServerLoadScene(level);
+        }
         else
         {
             ModPlayerController[] controllers = ModInstance.Instance.GetModPlayerControllers();

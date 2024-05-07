@@ -61,6 +61,7 @@ public class Hallucinations : MonoBehaviour
                 Instance.instance.SetParameterByName("volume", -13);
                 Instance.counter = 0;
                 Instance.isHallucinating = false;
+                Achievements.CompleteAchievement(10);
             }
         }
     }

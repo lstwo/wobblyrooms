@@ -4829,7 +4829,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.000025426021}
-  m_SizeDelta: {x: 0, y: 472.9018}
+  m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &645597375
 MonoBehaviour:
@@ -4869,14 +4869,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   achievementPrefab: {fileID: 2890876053795927792, guid: 97cba6ef4d5605e4fa9184b4c5839c71, type: 3}
   achievements:
-  - name: 1
-    description: asfc
-    image: {fileID: 21300000, guid: 3d9fe3530f4935e4e92809a614eb97db, type: 3}
+  - name: CHEATER!!
+    description: Edit your Save File for the first Time.
+    image: {fileID: 0}
+    id: 8
+  - name: Light work, No Reaction!
+    description: Get Jump scared for the first Time
+    image: {fileID: 0}
+    id: 9
+  - name: Weird Noise
+    description: Hallucinate for the first Time.
+    image: {fileID: 0}
+    id: 10
+  levelAchievements:
+  - name: First Impressions
+    description: Enter the Backrooms for the first time.
+    image: {fileID: 0}
     id: 0
-  - name: 2
-    description: gggg
-    image: {fileID: 21300000, guid: cc6d70e6dcb95594694142cd836773cc, type: 3}
+  - name: Where'd my Car go?
+    description: Enter Level 1 for the first time.
+    image: {fileID: 0}
+    id: 1
+  - name: Pipe Dreams
+    description: Enter Level 2 for the first time.
+    image: {fileID: 0}
     id: 2
+  - name: Power Outage
+    description: Enter Level 3 for the first time.
+    image: {fileID: 0}
+    id: 3
+  - name: Twitter HQ
+    description: Enter Level 4 for the first time.
+    image: {fileID: 0}
+    id: 4
+  - name: Can You Really Call This A Hotel, I Didn't Receive A Mint On My Pillow
+      Or Anything
+    description: Enter Level 5 for the first time.
+    image: {fileID: 0}
+    id: 5
+  - name: I don't have Words for this One
+    description: Enter Level 6 for the first time.
+    image: {fileID: 0}
+    id: 6
+  - name: Who let the Sink run?
+    description: Enter Level 7 for the first time.
+    image: {fileID: 0}
+    id: 7
 --- !u!1 &672755168
 GameObject:
   m_ObjectHideFlags: 0
@@ -5918,6 +5956,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 645597376}
+        m_TargetAssemblyTypeName: AchievementManager, Assembly-CSharp
+        m_MethodName: CompleteAchievement
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

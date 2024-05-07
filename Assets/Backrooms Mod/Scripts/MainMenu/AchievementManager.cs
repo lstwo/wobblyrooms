@@ -8,10 +8,17 @@ public class AchievementManager : MonoBehaviour
 {
     public GameObject achievementPrefab;
     public Achievement[] achievements;
+    public Achievement[] levelAchievements;
 
     void OnEnable()
     {
-        Achievements.All = achievements.ToList();
+        Achievements.All.Clear();
+        Achievements.LevelAchievements.Clear();
+
+        Achievements.All.AddRange(levelAchievements);
+        Achievements.All.AddRange(achievements);
+        Achievements.LevelAchievements.AddRange(levelAchievements);
+
         Achievements.LoadAchievements();
 
         LoadAchievements();
@@ -32,6 +39,8 @@ public class AchievementManager : MonoBehaviour
             go.GetComponent<AchievementItem>().achievement = achievement;
             go.GetComponent<AchievementItem>().Load();
         }
+
+        GetComponent<RectTransform>().sizeDelta.Set(0, 64 * completed.Count);
     }
 
     public void CompleteAchievement(int id)
@@ -44,6 +53,7 @@ public static class Achievements
 {
     public static List<Achievement> All = new List<Achievement>();
     public static List<Achievement> Completed = new List<Achievement>();
+    public static List<Achievement> LevelAchievements = new List<Achievement>();
 
     public static Dictionary<int, Achievement> MappedToID = new Dictionary<int, Achievement>();
 
