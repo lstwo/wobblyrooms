@@ -51,6 +51,8 @@ public class AchievementManager : MonoBehaviour
 
 public static class Achievements
 {
+    public static Action<int> onAchievementUnlocked = null;
+
     public static List<Achievement> All = new List<Achievement>();
     public static List<Achievement> Completed = new List<Achievement>();
     public static List<Achievement> LevelAchievements = new List<Achievement>();
@@ -87,6 +89,7 @@ public static class Achievements
         if (!Completed.Contains(MappedToID[id]) && GameSaves.currentSave != 4)
         {
             Completed.Add(MappedToID[id]);
+            onAchievementUnlocked.Invoke(id);
         }
     }
 }

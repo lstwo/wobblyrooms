@@ -29,6 +29,11 @@ public class SettingsManager : MonoBehaviour
     {
         Settings.SetHallucinations(enabled);
     }
+
+    public void setEntitiesAllowed(bool enabled)
+    {
+        Settings.SetEntitiesAllowed(enabled);
+    }
 }
 
 public static class Settings
@@ -36,6 +41,7 @@ public static class Settings
     public static bool jumpscares = true;
     public static bool ambience = true;
     public static bool hallucinations = true;
+    public static bool entities = true;
 
     public static bool enableExits = true;
 
@@ -65,5 +71,10 @@ public static class Settings
         hallucinations = b;
         if (b) PlayerPrefs.SetInt("hallucinations", 0);
         else PlayerPrefs.SetInt("hallucinations", 1);
+    }
+
+    public static void SetEntitiesAllowed(bool b)
+    {
+        entities = b;
     }
 }

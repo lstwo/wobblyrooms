@@ -85,7 +85,7 @@ public class Level2GenManager : MonoBehaviour
                     else ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorClosed, null, spawnPosition, lastSegmentEnd.rotation, null, true);
                 }
 
-                if (Random.Range(0, moncherChance) == 1)
+                if (Settings.entities && Random.Range(0, moncherChance) == 1)
                 {
                     if (Random.Range(0, 350) == 1)
                         ModNetworkManager.Instance.InstantiateNetworkPrefab(moncherPrefabEnd, null, spawnPosition, new Quaternion(moncherPrefabEnd.transform.rotation.x, -moncherPrefabEnd.transform.rotation.y,
@@ -118,7 +118,7 @@ public class Level2GenManager : MonoBehaviour
                         ModNetworkManager.Instance.InstantiateNetworkPrefab(DoorClosed, null, spawnPosition, lastSegmentStart.rotation, null, true);
                 }
 
-                if (Random.Range(0, moncherChance) == 1)
+                if (Settings.entities && Random.Range(0, moncherChance) == 1)
                 {
                     if (Random.Range(0, 350) == 1)
                         ModNetworkManager.Instance.InstantiateNetworkPrefab(moncherPrefabStart, null, spawnPosition, new Quaternion(moncherPrefabStart.transform.rotation.x, -moncherPrefabStart.transform.rotation.y,

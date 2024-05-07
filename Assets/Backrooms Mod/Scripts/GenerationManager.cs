@@ -109,7 +109,7 @@ public class GenerationManager : ModNetworkBehaviour
                 ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, Quaternion.Euler(0, rot, 0), null, true); // create the room
             }
 
-            if(surface != null)
+            if(surface != null && Settings.entities)
             {
                 if(Random.Range(0, 178) == 1)
                 {
