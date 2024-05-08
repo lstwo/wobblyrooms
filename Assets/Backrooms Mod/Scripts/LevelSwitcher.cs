@@ -10,7 +10,6 @@ public class LevelSwitcher : ModActionInteract
 
     protected override void OnInteract(ModPlayerController playerController)
     {
-        Achievements.CompleteAchievement(Achievements.LevelAchievements[level].id);
         NetworkManager.instance.ServerLoadScene(level);
     }
 }

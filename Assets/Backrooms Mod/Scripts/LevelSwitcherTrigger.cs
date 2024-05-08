@@ -12,7 +12,6 @@ public class LevelSwitcherTrigger : MonoBehaviour
     {
         if(Settings.enableExits)
         {
-            Achievements.CompleteAchievement(Achievements.LevelAchievements[level].id);
             NetworkManager.instance.ServerLoadScene(level);
         }
         else

@@ -28,7 +28,7 @@ public class AchievementManager : MonoBehaviour
     {
         for(int i = 0; i < transform.childCount; i++)
         {
-            Destroy(transform.GetChild(i));
+            Destroy(transform.GetChild(i).gameObject);
         }
 
         List<Achievement> completed = Achievements.Completed;
@@ -46,6 +46,11 @@ public class AchievementManager : MonoBehaviour
     public void CompleteAchievement(int id)
     {
         Achievements.CompleteAchievement(id);
+    }
+
+    public void ResetAchievements()
+    {
+        Achievements.ResetAchievements();
     }
 }
 
@@ -84,13 +89,32 @@ public static class Achievements
         }
     }
 
+    public static void SaveAchievements()
+    {
+        string saveString = "";
+
+        foreach(Achievement achievement in Completed)
+        {
+            saveString += achievement.id + " ";
+        }
+
+        PlayerPrefs.SetString(ACHIEVEMENTS_KEY, saveString.Trim());
+    }
+
     public static void CompleteAchievement(int id)
     {
         if (!Completed.Contains(MappedToID[id]) && GameSaves.currentSave != 4)
         {
             Completed.Add(MappedToID[id]);
             onAchievementUnlocked.Invoke(id);
+            SaveAchievements();
         }
+    }
+
+    public static void ResetAchievements()
+    {
+        Completed.Clear();
+        SaveAchievements();
     }
 }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using ModWobblyLife.Network;
 using UnityEngine.SceneManagement;
 using System;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class NetworkManager : ModNetworkBehaviour
 {
@@ -78,15 +79,20 @@ public class NetworkManager : ModNetworkBehaviour
     
     void ClientLoadScene(ModNetworkReader reader, ModRPCInfo info)
     {
+        string sceneName = reader.ReadString();
+
+        if(sceneName.StartsWith("Level"))
+            Achievements.CompleteAchievement(Achievements.LevelAchievements[int.Parse(sceneName.Split(' ')[1].Trim())].id);
+
         try 
         {
-            ModScenes.Load(reader.ReadString());
+            ModScenes.Load(sceneName);
         } 
         catch(NullReferenceException e)
         {
-            Debug.Log(reader.ReadString());
+            Debug.Log(sceneName);
             Debug.Log(e.StackTrace);
-            SceneManager.LoadScene(reader.ReadString());
+            SceneManager.LoadScene(sceneName);
         }
     }
 }

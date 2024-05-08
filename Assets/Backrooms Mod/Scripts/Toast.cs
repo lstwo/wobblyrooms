@@ -14,8 +14,8 @@ public class Toast : MonoBehaviour
 
     void ShowToast(int id)
     {
-        Debug.Log(id + ";; " + Achievements.MappedToID.Count + "; " + Achievements.MappedToID);
         achievementToast.GetComponent<AchievementItem>().achievement = Achievements.MappedToID[id];
-        achievementToast.GetComponent<Animator>().SetTrigger("ShowToast");
+        achievementToast.GetComponent<AchievementItem>().Load();
+        achievementToast.GetComponent<Animation>().Play();
     }
 }
