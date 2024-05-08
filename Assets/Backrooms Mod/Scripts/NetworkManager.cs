@@ -81,7 +81,9 @@ public class NetworkManager : ModNetworkBehaviour
     {
         string sceneName = reader.ReadString();
 
-        if(sceneName.StartsWith("Level"))
+        Debug.Log(sceneName.Split(' ')[1].Trim() + "; " + int.Parse(sceneName.Split(' ')[1].Trim()) + "; " + Achievements.LevelAchievements[int.Parse(sceneName.Split(' ')[1].Trim())].id);
+
+        if (sceneName.StartsWith("Level") && GameSaves.currentSave != 4)
             Achievements.CompleteAchievement(Achievements.LevelAchievements[int.Parse(sceneName.Split(' ')[1].Trim())].id);
 
         try 

@@ -34,6 +34,11 @@ public class SettingsManager : MonoBehaviour
     {
         Settings.SetEntitiesAllowed(enabled);
     }
+
+    public void setToastsAllowed(bool enabled)
+    {
+        Settings.SetToastsAllowed(enabled);
+    }
 }
 
 public static class Settings
@@ -42,6 +47,7 @@ public static class Settings
     public static bool ambience = true;
     public static bool hallucinations = true;
     public static bool entities = true;
+    public static bool toasts = true;
 
     public static bool enableExits = true;
 
@@ -76,5 +82,10 @@ public static class Settings
     public static void SetEntitiesAllowed(bool b)
     {
         entities = b;
+    }
+
+    public static void SetToastsAllowed(bool b)
+    {
+        toasts = b;
     }
 }

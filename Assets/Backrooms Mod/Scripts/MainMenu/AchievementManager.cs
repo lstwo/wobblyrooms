@@ -10,7 +10,7 @@ public class AchievementManager : MonoBehaviour
     public Achievement[] achievements;
     public Achievement[] levelAchievements;
 
-    void OnEnable()
+    public void OnEnable()
     {
         Achievements.All.Clear();
         Achievements.LevelAchievements.Clear();
