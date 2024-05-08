@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d17093fe1799649a0e141507d2004b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 7
   networkManager: {fileID: 0}
 --- !u!1 &5382472336880661336
 GameObject:

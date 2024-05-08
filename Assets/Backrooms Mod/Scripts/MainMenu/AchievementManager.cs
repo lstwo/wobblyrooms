@@ -48,6 +48,11 @@ public class AchievementManager : MonoBehaviour
         Achievements.CompleteAchievement(id);
     }
 
+    public void ForceCompleteAchievement(int id)
+    {
+        Achievements.ForceCompleteAchievement(id);
+    }
+
     public void ResetAchievements()
     {
         Achievements.ResetAchievements();
@@ -104,6 +109,16 @@ public static class Achievements
     public static void CompleteAchievement(int id)
     {
         if (!Completed.Contains(MappedToID[id]) && GameSaves.currentSave != 4)
+        {
+            Completed.Add(MappedToID[id]);
+            onAchievementUnlocked.Invoke(id);
+            SaveAchievements();
+        }
+    }
+
+    public static void ForceCompleteAchievement(int id)
+    {
+        if (!Completed.Contains(MappedToID[id]))
         {
             Completed.Add(MappedToID[id]);
             onAchievementUnlocked.Invoke(id);

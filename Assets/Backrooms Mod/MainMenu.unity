@@ -4187,7 +4187,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 645597376}
         m_TargetAssemblyTypeName: AchievementManager, Assembly-CSharp
-        m_MethodName: CompleteAchievement
+        m_MethodName: ForceCompleteAchievement
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
