@@ -75,6 +75,7 @@ public static class Achievements
     public static void LoadAchievements()
     {
         MappedToID.Clear();
+        MappedToLevel.Clear();
 
         foreach (Achievement achievement in All) MappedToID.Add(achievement.id, achievement);
         foreach (LevelAchievement levelAchievement in LevelAchievements) MappedToLevel.Add(levelAchievement.level, levelAchievement);
@@ -144,6 +145,7 @@ public class Achievement
     public int id;
 }
 
+[Serializable]
 public class LevelAchievement : Achievement
 {
     public int level;
