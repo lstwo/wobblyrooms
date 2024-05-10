@@ -4242,11 +4242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -4255,6 +4255,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -4356,11 +4360,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -4369,6 +4373,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -4470,11 +4478,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -4483,6 +4491,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -4584,11 +4596,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -4597,6 +4609,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -4698,11 +4714,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -4711,6 +4727,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -4812,11 +4832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -4825,6 +4845,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -4926,11 +4950,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -4939,6 +4963,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5040,11 +5068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5053,6 +5081,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5154,11 +5186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5167,6 +5199,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5268,11 +5304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5281,6 +5317,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5382,11 +5422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5395,6 +5435,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5496,11 +5540,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5509,6 +5553,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5610,11 +5658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5623,6 +5671,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5724,11 +5776,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5737,6 +5789,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5838,11 +5894,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5851,6 +5907,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -5952,11 +6012,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -5965,6 +6025,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6066,11 +6130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6079,6 +6143,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6180,11 +6248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6193,6 +6261,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6294,11 +6366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6307,6 +6379,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6408,11 +6484,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6421,6 +6497,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6522,11 +6602,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6535,6 +6615,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6636,11 +6720,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6649,6 +6733,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6750,11 +6838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6763,6 +6851,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6864,11 +6956,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6877,6 +6969,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -6978,11 +7074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -6991,6 +7087,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -7092,11 +7192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -7105,6 +7205,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
@@ -7206,11 +7310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Lightmapping
@@ -7219,6 +7323,10 @@ PrefabInstance:
     - target: {fileID: 3283714861444618098, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051342939946844226, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ea1804a26cba4e8da3e3c802e128d, type: 3}
