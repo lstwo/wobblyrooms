@@ -8,7 +8,7 @@ public class AchievementManager : MonoBehaviour
 {
     public GameObject achievementPrefab;
     public Achievement[] achievements;
-    public Achievement[] levelAchievements;
+    public LevelAchievement[] levelAchievements;
 
     public void OnEnable()
     {
@@ -65,9 +65,10 @@ public static class Achievements
 
     public static List<Achievement> All = new List<Achievement>();
     public static List<Achievement> Completed = new List<Achievement>();
-    public static List<Achievement> LevelAchievements = new List<Achievement>();
+    public static List<LevelAchievement> LevelAchievements = new List<LevelAchievement>();
 
     public static Dictionary<int, Achievement> MappedToID = new Dictionary<int, Achievement>();
+    public static Dictionary<int, LevelAchievement> MappedToLevel = new Dictionary<int, LevelAchievement>();
 
     public const string ACHIEVEMENTS_KEY = "twr.encodedAchievements";
 
@@ -76,6 +77,7 @@ public static class Achievements
         MappedToID.Clear();
 
         foreach (Achievement achievement in All) MappedToID.Add(achievement.id, achievement);
+        foreach (LevelAchievement levelAchievement in LevelAchievements) MappedToLevel.Add(levelAchievement.level, levelAchievement);
 
         if (PlayerPrefs.GetString(ACHIEVEMENTS_KEY) != "")
         {
@@ -140,4 +142,9 @@ public class Achievement
     public string description;
     public Sprite image;
     public int id;
+}
+
+public class LevelAchievement : Achievement
+{
+    public int level;
 }
