@@ -5459,7 +5459,7 @@ MonoBehaviour:
   levelAchievements:
   - name: First Impressions
     description: Enter the Backrooms for the first time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: d57fd171ff24fdd428951306e71d821e, type: 3}
     id: 0
     level: 0
   - name: Where'd my Car go?
@@ -5498,6 +5498,11 @@ MonoBehaviour:
     image: {fileID: 0}
     id: 7
     level: 7
+  - name: Backrooms PLUS
+    description: Find Level 0.2
+    image: {fileID: 0}
+    id: 12
+    level: -2
 --- !u!1 &672755168
 GameObject:
   m_ObjectHideFlags: 0
