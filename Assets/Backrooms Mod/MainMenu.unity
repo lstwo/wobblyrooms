@@ -5464,43 +5464,43 @@ MonoBehaviour:
     level: 0
   - name: Where'd my Car go?
     description: Enter Level 1 for the first time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 6069a40f09e59354d82d5b3bc1b88495, type: 3}
     id: 1
     level: 1
   - name: Pipe Dreams
     description: Enter Level 2 for the first time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: a27d11c445f79924199f0aa03798789c, type: 3}
     id: 2
     level: 2
   - name: Power Outage
     description: Enter Level 3 for the first time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 85d64726e7a2ad648a41a4b975c769a2, type: 3}
     id: 3
     level: 3
   - name: Twitter HQ
     description: Enter Level 4 for the first time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 8a3dc31531569904ea3a2341e380cba0, type: 3}
     id: 4
     level: 4
   - name: Can You Really Call This A Hotel, I Didn't Receive A Mint On My Pillow
       Or Anything
     description: Enter Level 5 for the first time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: d80637fc32c309a4d9453d75d363990e, type: 3}
     id: 5
     level: 5
   - name: I don't have Words for this One
     description: Enter Level 6 for the first time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: cfe9b33e5d15c274eb3e394e9fb49c25, type: 3}
     id: 6
     level: 6
   - name: Who let the Sink run?
     description: Enter Level 7 for the first time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 84c7cece216509741be7352a63097d61, type: 3}
     id: 7
     level: 7
   - name: Backrooms PLUS
     description: Find Level 0.2
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 16931f5a6427b2d4d88dba8aaa1095e5, type: 3}
     id: 12
     level: -2
 --- !u!1 &672755168
