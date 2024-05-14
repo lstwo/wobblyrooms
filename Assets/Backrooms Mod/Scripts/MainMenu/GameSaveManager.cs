@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-using ModWobblyLife.UI;
-using static Cinemachine.DocumentationSortingAttribute;
 
 public class GameSaveManager : MonoBehaviour
 {
@@ -19,6 +15,7 @@ public class GameSaveManager : MonoBehaviour
     public TMP_InputField seedInput;
     public TMP_InputField levelInput;
     public SaveButton saveButton;
+    public Toggle hardcoreToggle;
 
     public Toggle levelTriggerOptionFreeplay;
     public TMP_InputField levelInputFreeplay;
@@ -29,7 +26,7 @@ public class GameSaveManager : MonoBehaviour
     {
         GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
         save = GameSaves.GetSave(saveNumber);
-        if(gameImage != null)
+        if(gameImage != null && imageAssigns.spriteList.ContainsKey(save.level))
             gameImage.sprite = imageAssigns.spriteList[save.level];
         if(gameName != null)
             gameName.text = save.name;
@@ -39,7 +36,7 @@ public class GameSaveManager : MonoBehaviour
     {
         GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
         save = GameSaves.GetSave(saveNumber);
-        if (gameImage != null)
+        if (gameImage != null && imageAssigns.spriteList.ContainsKey(save.level))
             gameImage.sprite = imageAssigns.spriteList[save.level];
         if (gameName != null)
             gameName.text = save.name;
@@ -52,6 +49,7 @@ public class GameSaveManager : MonoBehaviour
         seedInput.text = "" + save.seed;
         levelInput.text = "" + save.level;
         saveButton.saveManager = this;
+        hardcoreToggle.isOn = save.hardcore;
     }
 
     public void LoadSave()
@@ -73,9 +71,9 @@ public class GameSaveManager : MonoBehaviour
     {
         save.seed = int.Parse(seedInput.text);
         save.name = nameInput.text;
-        if (imageAssigns.spriteList.Length <= int.Parse(levelInput.text))
-            save.level = 0;
-        else save.level = int.Parse(levelInput.text);
+        if(imageAssigns.keys.Contains(int.Parse(levelInput.text)))
+            save.level = int.Parse(levelInput.text);
+        save.hardcore = hardcoreToggle.isOn;
 
         gameImage.sprite = imageAssigns.spriteList[save.level];
         gameName.text = save.name;
@@ -103,49 +101,62 @@ public static class GameSaves
     public static GameSave save3 = new GameSave("save_three");
     public static GameSave save4 = new GameSave("save_four");
 
-    public static int currentSave = 1;
+    public static int currentSave = 0;
 
-    public static void SaveGame(GameSave save, int level, string name, int seed)
+    public static void SaveGame(GameSave save, int level, string name, int seed, bool hardcore)
     {
+        Debug.Log("SAVE GAME");
         save.level = level;
         save.name = name;
         save.seed = seed;
+        save.hardcore = hardcore;
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
         PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
+        PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
     }
 
     public static void SaveGame(GameSave save, GameSave other)
     {
+        Debug.Log("SAVE GAME");
+
         save.level = other.level;
         save.name = other.name;
         save.seed = other.seed;
+        save.hardcore = other.hardcore;
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
         PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
-
+        PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
     }
 
     public static void LoadSave(GameSave save)
     {
+        Debug.Log("LOAD SAVE");
         save.level = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_level");
         save.name = PlayerPrefs.GetString(save.pprefsKeyPrefix + "_name");
+        save.hardcore = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_hardcore") == 1;
+        save.seed = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_seed");
         NetworkManager.instance.ServerGenSeed(false);
         NetworkManager.instance.ServerLoadScene(save.level);
     }
 
     public static void UpdateSaveGet(GameSave save)
     {
+        Debug.Log("UPDATE SAVE GET");
         save.level = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_level");
         save.name = PlayerPrefs.GetString(save.pprefsKeyPrefix + "_name");
         save.seed = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_seed");
+        save.hardcore = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_hardcore") == 1;
     }
 
     public static void UpdateSaveSet(GameSave save)
     {
+        Debug.Log("UPDATE SAVE SET");
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
         PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
         PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
+        PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
     }
 
     public static GameSave GetSave(int saveNumber)
@@ -162,6 +173,8 @@ public class GameSave
 
     public int level = 0;
     public int seed = 0;
+
+    public bool hardcore = false;
 
     public GameSave(string pprefsKeyPrefix)
     {

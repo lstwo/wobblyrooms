@@ -26,7 +26,7 @@ public class NetworkManager : ModNetworkBehaviour
     protected override void ModNetworkStart(ModNetworkObject modNetworkObject)
     {
         base.ModNetworkStart(modNetworkObject);
-        instance.ServerGenSeed(false);
+        ServerGenSeed(false);
     }
 
     protected override void ModRegisterRPCs(ModNetworkObject modNetworkObject)
@@ -39,7 +39,7 @@ public class NetworkManager : ModNetworkBehaviour
 
     public void ServerGenSeed(bool _override)
     {
-        if (modNetworkObject == null || !modNetworkObject.IsServer()) return;
+        if (modNetworkObject == null || !modNetworkObject.IsServer() || GameSaves.currentSave == 0) return;
 
         int seed;
         if (_override) seed = UnityEngine.Random.Range(0, int.MaxValue);
@@ -55,11 +55,11 @@ public class NetworkManager : ModNetworkBehaviour
 
         UnityEngine.Random.InitState(reader.ReadInt32());
 
-        if (modNetworkObject != null && modNetworkObject.IsServer())
+        if (modNetworkObject != null && modNetworkObject.IsServer() && GameSaves.currentSave != 0)
         {
             GameSave save = GameSaves.GetSave(GameSaves.currentSave);
             save.seed = reader.ReadInt32();
-            GameSaves.SaveGame(save, save.level, save.name, save.seed);
+            GameSaves.SaveGame(save, save.level, save.name, save.seed, save.hardcore);
         }
 
         if (generator != null)
@@ -73,7 +73,8 @@ public class NetworkManager : ModNetworkBehaviour
         Debug.Log(modNetworkObject.IsServer());
         if (modNetworkObject == null) return;
         string sceneName = "Level " + level;
-        GameSaves.SaveGame(GameSaves.GetSave(GameSaves.currentSave), level, GameSaves.GetSave(GameSaves.currentSave).name, GameSaves.GetSave(GameSaves.currentSave).seed);
+        GameSaves.SaveGame(GameSaves.GetSave(GameSaves.currentSave), level, GameSaves.GetSave(GameSaves.currentSave).name, GameSaves.GetSave(GameSaves.currentSave).seed, 
+            GameSaves.GetSave(GameSaves.currentSave).hardcore);
         modNetworkObject.SendRPC(LOAD_SCENE, ModRPCRecievers.All, sceneName);
     }
     
