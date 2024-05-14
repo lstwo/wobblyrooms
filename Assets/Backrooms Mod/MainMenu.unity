@@ -5858,7 +5858,7 @@ MonoBehaviour:
     id: 10
   - name: Volunteer
     description: Play Freeplay for the first Time
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 81aac20b08b2e5647b760e821ab3a5c4, type: 3}
     id: 11
   - name: Blindingly Bright
     description: Wander deep into Level 1.3
