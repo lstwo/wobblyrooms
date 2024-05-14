@@ -3131,7 +3131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &300065458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5846,7 +5846,7 @@ MonoBehaviour:
   achievements:
   - name: CHEATER!!
     description: Edit your Save File for the first Time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: ba2bc8312093bce419b147ab09898890, type: 3}
     id: 8
   - name: Light work, No Reaction!
     description: Get Jump scared for the first Time
@@ -5854,12 +5854,16 @@ MonoBehaviour:
     id: 9
   - name: Weird Noise
     description: Hallucinate for the first Time.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 17766ed880e419b4db9dec37cd40867e, type: 3}
     id: 10
   - name: Volunteer
     description: Play Freeplay for the first Time
     image: {fileID: 0}
     id: 11
+  - name: Blindingly Bright
+    description: Wander deep into Level 1.3
+    image: {fileID: 21300000, guid: 201acf3273459b34fbbe5771227a74ca, type: 3}
+    id: 13
   levelAchievements:
   - name: First Impressions
     description: Enter the Backrooms for the first time.

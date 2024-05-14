@@ -97,8 +97,6 @@ public class GenerationManager : ModNetworkBehaviour
 
                     if (rot == 0.7071068f) rot = 90; else if (rot == 1) rot = 180; else if (rot == -0.7071068f) rot = -90f;
 
-                    Debug.Log(rot);
-
                     ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, Quaternion.Euler(0, rot, 0), null, true); // create the room
                 }
             }

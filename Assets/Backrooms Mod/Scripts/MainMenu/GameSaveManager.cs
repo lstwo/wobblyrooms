@@ -24,6 +24,7 @@ public class GameSaveManager : MonoBehaviour
 
     private void Awake()
     {
+        if(imageAssigns != null) imageAssigns.Awake();
         GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
         save = GameSaves.GetSave(saveNumber);
         if(gameImage != null && imageAssigns.spriteList.ContainsKey(save.level))
@@ -34,6 +35,7 @@ public class GameSaveManager : MonoBehaviour
 
     private void OnEnable()
     {
+        if (imageAssigns != null) imageAssigns.Awake();
         GameSaves.UpdateSaveGet(GameSaves.GetSave(saveNumber));
         save = GameSaves.GetSave(saveNumber);
         if (gameImage != null && imageAssigns.spriteList.ContainsKey(save.level))
