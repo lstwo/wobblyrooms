@@ -40,7 +40,8 @@ public class AchievementManager : MonoBehaviour
             go.GetComponent<AchievementItem>().Load();
         }
 
-        GetComponent<RectTransform>().sizeDelta.Set(0, 64 * completed.Count);
+        GetComponent<RectTransform>().sizeDelta = new Vector2(0, 64 * completed.Count);
+        Debug.Log(GetComponent<RectTransform>().sizeDelta + "; " + completed.Count);
     }
 
     public void CompleteAchievement(int id)
