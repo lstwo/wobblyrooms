@@ -16,6 +16,7 @@ public class MainMenuCanvas : MonoBehaviour
         AchievementManager.OnEnable();
         if(temp != null && (NetworkManager.num / 4 == tempNum || NetworkManager.num / 4 == tempNum - 1 || NetworkManager.num / 4 == tempNum + 1))
         {
+            Achievements.CompleteAchievement(14);
             NetworkManager.temp = true;
             temp.SetActive(true);
             gameObject.SetActive(false);
