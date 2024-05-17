@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{93bd7ed5-76f2-4a22-b299-a30c441a4acf}">
+		<property name="assetPath">
+			<value>The Backrooms_ Level 7 (Ambience).mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>240.14400000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2dbaf4ad-f857-4c46-a725-91515d45b11a}</destination>
+		</relationship>
+	</object>
+</objects>
