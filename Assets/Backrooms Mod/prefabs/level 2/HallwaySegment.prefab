@@ -1496,6 +1496,7 @@ GameObject:
   - component: {fileID: 5034780587960482746}
   - component: {fileID: 4884666285136072588}
   - component: {fileID: 1129566439519079317}
+  - component: {fileID: 2000166308563636140}
   m_Layer: 12
   m_Name: light
   m_TagString: Untagged
@@ -1678,17 +1679,21 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 00000000
-  m_SelectedEdges:
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  m_SelectedVertices: 00000000000000000000000000000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
+--- !u!114 &2000166308563636140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321719146534567454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 040da340cc7760642af9e28d450e791b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7358959765417500440
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -31,6 +31,7 @@ public class GameSaveManager : MonoBehaviour
             gameImage.sprite = imageAssigns.spriteList[save.level];
         if(gameName != null)
             gameName.text = save.name;
+        NetworkManager.instance.SetNum(DateTime.Now.Hour * 4);
     }
 
     private void OnEnable()

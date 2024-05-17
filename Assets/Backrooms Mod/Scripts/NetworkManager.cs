@@ -13,6 +13,8 @@ public class NetworkManager : ModNetworkBehaviour
 
     public GameObject pipeRoomPrefab;
     public Level2GenManager pipeDreamGenManager;
+    public static int num;
+    public static bool temp;
 
     public static NetworkManager instance;
 
@@ -76,6 +78,11 @@ public class NetworkManager : ModNetworkBehaviour
         GameSaves.SaveGame(GameSaves.GetSave(GameSaves.currentSave), level, GameSaves.GetSave(GameSaves.currentSave).name, GameSaves.GetSave(GameSaves.currentSave).seed, 
             GameSaves.GetSave(GameSaves.currentSave).hardcore);
         modNetworkObject.SendRPC(LOAD_SCENE, ModRPCRecievers.All, sceneName);
+    }
+
+    public void SetNum(int i)
+    {
+        num = i;
     }
     
     void ClientLoadScene(ModNetworkReader reader, ModRPCInfo info)
