@@ -15,16 +15,15 @@ MonoBehaviour:
   activeProfile: 0
   exportProfiles:
   - referencePaths: []
-    modName: Backrooms Mod4
+    modName: Backrooms Mod
     modAuthor: 
-    modVersion: 0.10.0
+    modVersion: 1.0.0
     modDescription: 
-    modAssetPath: C:/Users/zocker/Desktop/uNITY STUFF/file.404/Wobblyrooms/wobblyrooms/Assets/Backrooms
-      Mod
-    modExportPath: C:/Users/zocker/AppData/LocalLow/RubberBandGames/Wobbly Life/ModUpload
+    modAssetPath: Assets/Backrooms Mod
+    modExportPath: ../
     modIcon: {fileID: 0}
   logLevel: 3
-  optimizeMode: 1
+  optimizeMode: 0
   compressionLevel: 2
   clearConsoleOnBuild: 1
   showOutputDirectory: 1
