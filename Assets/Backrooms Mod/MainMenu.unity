@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 329823950}
-  name: {fileID: 1472702887}
+  _name: {fileID: 0}
   description: {fileID: 353802920}
   achievement:
     name: 
