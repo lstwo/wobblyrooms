@@ -432,11 +432,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2890876053795927792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0595536bdafbe4a9d1ecd324c31216, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cf85672199b26f4f8d93fd5489894f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2890876052982313085}
-  name: {fileID: 2890876052429279776}
+  _name: {fileID: 2890876052429279776}
   description: {fileID: 2890876052395913580}
   achievement:
     name: 

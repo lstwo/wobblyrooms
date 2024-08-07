@@ -302,7 +302,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506002365898225415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e16514d5ec0e346b4af9d635f10bfe, type: 3}
+  m_Script: {fileID: 11500000, guid: fa078455a4757bf40a988a815823aba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementPerSecond: {x: 2.5, y: 0, z: 0}
@@ -329,11 +329,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506002365898225415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb674a5095015ed45b99dfdf31b4babb, type: 3}
+  m_Script: {fileID: 11500000, guid: c50faaf27b987984497624e9ed492aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   assetID: a50d1b892d4398948af2f5e2b4a4bf66
-  jumpscare: {fileID: 0}
+  visual: {fileID: 0}
+  doJumpscare: 1
 --- !u!1 &1666908424679658588
 GameObject:
   m_ObjectHideFlags: 0

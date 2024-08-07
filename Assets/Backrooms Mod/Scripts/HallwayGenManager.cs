@@ -37,6 +37,7 @@ namespace Wobblyrooms
 
         private IEnumerator StartGenerate()
         {
+            yield return null;
             for (int i = 0; i < maxSegmentsInMemory; i++)
             {
                 GenerateNewSegment(true);

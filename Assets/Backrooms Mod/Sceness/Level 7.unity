@@ -5438,6 +5438,14 @@ PrefabInstance:
       propertyPath: defaultSpawnPoint
       value: 
       objectReference: {fileID: 1266611012}
+    - target: {fileID: 5958941301027785934, guid: ebea124294a0d7145b051b79528256a4, type: 3}
+      propertyPath: generationManager
+      value: 
+      objectReference: {fileID: 7767333837234249414}
+    - target: {fileID: 5958941301027785934, guid: ebea124294a0d7145b051b79528256a4, type: 3}
+      propertyPath: networkingManager
+      value: 
+      objectReference: {fileID: 1450777974}
     - target: {fileID: 7612004904104121224, guid: ebea124294a0d7145b051b79528256a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.371
@@ -5689,6 +5697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318959332}
   - component: {fileID: 1318959331}
+  - component: {fileID: 1318959333}
   m_Layer: 0
   m_Name: Directional Light (1)
   m_TagString: Untagged
@@ -5772,6 +5781,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 48.294, y: 106.946, z: 68.213}
+--- !u!114 &1318959333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318959330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac6cd8c9a03410499204fe7b92aedd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1342989557
 GameObject:
   m_ObjectHideFlags: 0
@@ -6349,6 +6370,17 @@ MonoBehaviour:
   - {fileID: 4306340293152679030, guid: d2b49dfb307da3f46a45d2d2dba7c5d3, type: 3}
   - {fileID: 4306340293152679030, guid: 66155e95d26ad4a4e8f6dd08133b59d6, type: 3}
   - {fileID: 4306340293152679030, guid: 88effe6f0e2cc1847b59603020ce99f9, type: 3}
+--- !u!114 &1450777974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7153739545273288201, guid: 3e0681bf8f3fbda49b5b7c8846b6724c, type: 3}
+  m_PrefabInstance: {fileID: 1450777971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450777972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29022c433f127c45a97fc13f2a3e75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1500038470
 Mesh:
   m_ObjectHideFlags: 0
@@ -7195,7 +7227,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1857689022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b59d6032b782e4481e7d62e78457f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f67e117d5597d0489e89adf215c7f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1857689024
@@ -8440,6 +8472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2094562176}
   - component: {fileID: 2094562175}
+  - component: {fileID: 2094562177}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -8523,6 +8556,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &2094562177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094562174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac6cd8c9a03410499204fe7b92aedd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &2105528457
 Mesh:
   m_ObjectHideFlags: 0
@@ -8989,23 +9034,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 7767333837234249413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b69afdcc9c3e541b27e6ecc4e7009e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c9f0e24111c7534db953291a623eb07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetID: 22b9d4d7706fa714085a72673324b983
+  assetID: 
   seed: 42
   mapSize: 625
   roomSize: 14
-  worldGrid: {fileID: 0}
+  worldGrid: {fileID: 7767333837234249415}
   mapEmptyness: 0
   mapBrightness: 0
+  bUseRandomRot: 1
   enableRareRooms: 0
   rareness: 20
   rareAmount: 1
-  surface: {fileID: 0}
-  agents: []
-  moncher: {fileID: 0}
-  bUseRandomRot: 0
   roomTypes:
   - {fileID: 6385422151803050362, guid: f80595244bef61840bbf6a52eae36fc7, type: 3}
   - {fileID: 6385422151803050362, guid: 1fd0f675d1fc52949b7342b47314082d, type: 3}
@@ -9016,5 +9058,9 @@ MonoBehaviour:
   - {fileID: 6385422151803050362, guid: f80595244bef61840bbf6a52eae36fc7, type: 3}
   - {fileID: 6385422151803050362, guid: 88effe6f0e2cc1847b59603020ce99f9, type: 3}
   emptyRoom: {fileID: 0}
-  lightTypes: []
   rareRooms: []
+--- !u!4 &7767333837234249415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6461756627739396537, guid: 22b9d4d7706fa714085a72673324b983, type: 3}
+  m_PrefabInstance: {fileID: 7767333837234249412}
+  m_PrefabAsset: {fileID: 0}

@@ -31,17 +31,25 @@ namespace Wobblyrooms
         public static GameMode Instance { get { return _instance; } }
 
 
-        protected void Awake()
+        protected override void ModAwake()
         {
-            if (_instance != null && _instance != this) Destroy(this);
+            Debug.Log(generationManager + "asfkjhksdhdgm");
+            Debug.Log(networkingManager + "asfkjhksdhdgm");
+
+            base.ModAwake();
+
             _instance = this;
 
             if(generationManager != null)
                 StartCoroutine(generationManager.AwakeGen());
         }
 
-        protected void Start()
+        protected override void ModStart()
         {
+            Debug.Log(generationManager + "asfkjhksdhdgm");
+            Debug.Log(networkingManager + "asfkjhksdhdgm");
+            base.ModStart();
+
             if(generationManager != null)
                 StartCoroutine(generationManager.StartGen());
         }

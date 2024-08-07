@@ -7660,6 +7660,8 @@ GameObject:
   - component: {fileID: 3607324045544783604}
   - component: {fileID: 7357625816037397301}
   - component: {fileID: 1175856865864203313}
+  - component: {fileID: 702731958177938830}
+  - component: {fileID: 6031692426592507272}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -7760,6 +7762,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.022029907, y: 0.022029903, z: 0.036484245}
   m_Center: {x: 0, y: 2.2842143e-17, z: -0.0062859003}
+--- !u!114 &702731958177938830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7153257966303528491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1635262877, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCompression: 1
+  bUseChildTransformPositionCompression: 0
+  networkPriory: 2
+  mainTransformSyncSetting:
+    settings:
+      bSyncPosition: 1
+      bSyncRotation: 1
+      bSyncScale: 0
+  externalTransformsToSync: []
+--- !u!114 &6031692426592507272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7153257966303528491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -196077913, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetID: 74479c42a9fe9d146963bd3c2a9a9f72
 --- !u!1 &7233527487263623170
 GameObject:
   m_ObjectHideFlags: 0

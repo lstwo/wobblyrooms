@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 5667394314529140613}
   - component: {fileID: 8269993381676387917}
   - component: {fileID: 7670425193421338142}
-  - component: {fileID: 3989570026274388237}
+  - component: {fileID: 6702589808973396243}
   m_Layer: 0
   m_Name: DoorWorking (1)
   m_TagString: Untagged
@@ -266,7 +266,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1.9777089}
   m_Center: {x: 0, y: 0, z: -0.4888528}
---- !u!114 &3989570026274388237
+--- !u!114 &6702589808973396243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,11 +275,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2808890516353526624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d17093fe1799649a0e141507d2004b, type: 3}
+  m_Script: {fileID: 11500000, guid: 21423f3927ead2d4da1ad5ddd480e806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  networkManager: {fileID: 0}
 --- !u!1 &4904388453699435496
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +338,7 @@ GameObject:
   - component: {fileID: 2397496538285363050}
   - component: {fileID: 4450751399231190246}
   - component: {fileID: 445673072933488533}
-  - component: {fileID: 9200286152009349308}
+  - component: {fileID: 7545281420939452599}
   m_Layer: 0
   m_Name: DoorWorking
   m_TagString: Untagged
@@ -423,7 +422,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1.9777089}
   m_Center: {x: 0, y: 0, z: -0.4888528}
---- !u!114 &9200286152009349308
+--- !u!114 &7545281420939452599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,8 +431,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5088643710915337986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d17093fe1799649a0e141507d2004b, type: 3}
+  m_Script: {fileID: 11500000, guid: 21423f3927ead2d4da1ad5ddd480e806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  networkManager: {fileID: 0}

@@ -40,10 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7153739545273288200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f513451858ab2f8408ca556e23a3e247, type: 3}
+  m_Script: {fileID: 11500000, guid: d29022c433f127c45a97fc13f2a3e75a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   assetID: 3e0681bf8f3fbda49b5b7c8846b6724c
-  pipeRoomPrefab: {fileID: 0}
-  pipeDreamGenManager: {fileID: 0}
-  generator: {fileID: 0}

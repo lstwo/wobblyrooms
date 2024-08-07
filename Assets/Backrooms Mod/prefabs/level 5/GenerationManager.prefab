@@ -71,7 +71,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6461756628023278579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b69afdcc9c3e541b27e6ecc4e7009e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c9f0e24111c7534db953291a623eb07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   assetID: 22b9d4d7706fa714085a72673324b983
@@ -81,14 +81,10 @@ MonoBehaviour:
   worldGrid: {fileID: 6461756627739396537}
   mapEmptyness: 2
   mapBrightness: 0
+  bUseRandomRot: 1
   enableRareRooms: 1
   rareness: 5000
   rareAmount: 10
-  surface: {fileID: 0}
-  agents: []
-  moncher: {fileID: 0}
   roomTypes: []
   emptyRoom: {fileID: 0}
-  lightTypes:
-  - {fileID: 7985571365002968786, guid: 255b24a4bf387254eabb8037f2ca08cd, type: 3}
   rareRooms: []

@@ -1478,11 +1478,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3196608359099143339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d17093fe1799649a0e141507d2004b, type: 3}
+  m_Script: {fileID: 11500000, guid: 21423f3927ead2d4da1ad5ddd480e806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 4
-  networkManager: {fileID: 0}
 --- !u!1 &3999959822137744020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2869,7 +2868,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 18.079784, w: 3.963569}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3014,8 +3013,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9051642389854996696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d17093fe1799649a0e141507d2004b, type: 3}
+  m_Script: {fileID: 11500000, guid: 21423f3927ead2d4da1ad5ddd480e806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 4
-  networkManager: {fileID: 0}
