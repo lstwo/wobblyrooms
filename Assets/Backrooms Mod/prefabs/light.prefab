@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 2161054553314565838}
   - component: {fileID: 2161054553314565833}
   - component: {fileID: 1519552829125035718}
-  - component: {fileID: 833901599765293959}
+  - component: {fileID: 7387978969945866802}
   m_Layer: 12
   m_Name: light
   m_TagString: Untagged
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!114 &833901599765293959
+--- !u!114 &7387978969945866802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2161054553314565832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040da340cc7760642af9e28d450e791b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ac6cd8c9a03410499204fe7b92aedd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2161054554236472663

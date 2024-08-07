@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 2934462726155967586}
   - component: {fileID: 3401333930065793674}
   - component: {fileID: 3963432876275357013}
-  - component: {fileID: 5055590981623509885}
   m_Layer: 0
   m_Name: level_3_moncher (1)
   m_TagString: Untagged
@@ -191,24 +190,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.9153137
-  m_Height: 4.8168106
+  m_Height: 5.6262136
   m_Direction: 1
-  m_Center: {x: -0.23031044, y: 1.341814, z: 0}
---- !u!114 &5055590981623509885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2590307428479715032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 071e54af70a6e3d459be68927dc67dea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  visual: {fileID: 5213943140226658372}
-  jumpscare: {fileID: 0}
+  m_Center: {x: -0.23031044, y: 1.7278349, z: 0}
 --- !u!1 &2849959663056658414
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,8 +294,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3401333929508173877}
-  - component: {fileID: 4813973010255631404}
   - component: {fileID: 6344584686138646641}
+  - component: {fileID: 3015363729362191110}
   m_Layer: 0
   m_Name: moncher 1
   m_TagString: Untagged
@@ -335,19 +319,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4813973010255631404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3401333929508173874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -196077913, guid: 7e2bf859fdd8d704c9ff230cc7b353ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  assetID: 51ba31c5b56c8e249853d21dc06f5b26
 --- !u!114 &6344584686138646641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +340,25 @@ MonoBehaviour:
       bSyncRotation: 1
       bSyncScale: 0
   externalTransformsToSync: []
+--- !u!114 &3015363729362191110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3401333929508173874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42fc52caf4362e24d81c5687c12a4863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetID: 51ba31c5b56c8e249853d21dc06f5b26
+  visual: {fileID: 5213943140226658372}
+  doJumpscare: 1
+  player: {fileID: 0}
+  visualsYRotOffset: 0
+  visualsYPosOffset: -1
+  lockXZRotation: 1
 --- !u!1 &3673492258268707752
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +642,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5213943140226658372}
   - component: {fileID: 2214514815323777598}
-  - component: {fileID: 6710943759026416556}
   m_Layer: 0
   m_Name: red_mouth start
   m_TagString: Untagged
@@ -698,20 +687,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!136 &6710943759026416556
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4832491067909286654}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.54
-  m_Height: 5.14
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.21, z: 0.27}
 --- !u!1 &4926233584076072395
 GameObject:
   m_ObjectHideFlags: 0

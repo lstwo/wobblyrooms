@@ -18,6 +18,9 @@ namespace Wobblyrooms
         [Tooltip("IMPORTANT: Set to -1 for Level 6 Monster and to 0 for Level 3 Monster")]
         public float visualsYPosOffset;
 
+        [Tooltip("Whether X and Z rotation should be locked")]
+        public bool lockXZRotation = true;
+
         float timer = 0;
 
         private void Start()
@@ -32,7 +35,7 @@ namespace Wobblyrooms
             timer += Time.deltaTime;
             if (timer > 5)
             {
-                GetComponent<NavMeshAgent>().SetDestination(player.GetPlayerPosition());
+                GetComponentElseChildren<NavMeshAgent>().SetDestination(player.GetPlayerPosition());
                 timer = 0;
             }
 
@@ -40,6 +43,19 @@ namespace Wobblyrooms
             visual.Rotate(Vector3.up, visualsYRotOffset);
             visual.position = transform.position;
             visual.Translate(Vector3.up * visualsYPosOffset);
+
+            if(lockXZRotation) visual.rotation = Quaternion.Euler(new Vector3(0, visual.rotation.y, 0));       
+        }
+
+        T GetComponentElseChildren<T>()
+        {
+            if(TryGetComponent<T>(out var component))
+            {
+                return component;
+            } else
+            {
+                return GetComponentInChildren<T>();
+            }
         }
     }
 }

@@ -9,7 +9,6 @@ namespace Wobblyrooms
     public class LevelSwitcher : ModActionInteract
     {
         public int level;
-        public NetworkingManager networkManager;
 
         protected override void OnInteract(ModPlayerController playerController)
         {

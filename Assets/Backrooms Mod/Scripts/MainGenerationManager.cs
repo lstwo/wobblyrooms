@@ -138,16 +138,6 @@ namespace Wobblyrooms
                 currentPosTracker++; // set the tracker to the next room
                 currentPosX += roomSize; // move to current x position to next to the last room
             }
-
-            if (surface == null && agents.Count < 1) yield break;
-
-            surface.agentTypeID = agents[0].agentTypeID;
-            surface.BuildNavMesh();
-
-            foreach (NavMeshAgent agent in agents)
-            {
-                agent.gameObject.SetActive(true);
-            }
         }
 
         public override IEnumerator UpdateGen(List<ModPlayerController> controllers)

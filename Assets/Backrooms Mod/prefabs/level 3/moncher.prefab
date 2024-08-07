@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 2590307428479715035}
   - component: {fileID: 2590307428479715034}
   m_Layer: 0
-  m_Name: level_3_moncher (1)
+  m_Name: agent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,12 +373,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2590307428479715032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ca7f3fc1e708f43a15e7dfd865c672, type: 3}
+  m_Script: {fileID: 11500000, guid: 42fc52caf4362e24d81c5687c12a4863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  assetID: f04ef1204cc3f124888a0a0c0c2e9250
   visual: {fileID: 3401333930919115629}
-  jumpscare: {fileID: 0}
+  doJumpscare: 1
+  player: {fileID: 0}
+  visualsYRotOffset: -90
+  visualsYPosOffset: 0
 --- !u!135 &2590307428479715034
 SphereCollider:
   m_ObjectHideFlags: 0

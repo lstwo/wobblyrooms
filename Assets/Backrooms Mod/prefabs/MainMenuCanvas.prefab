@@ -2734,7 +2734,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962749801078496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668a0358b79c447449bf8269cef3ac5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c6096fe1df681344ae1a1367740ed1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameImage: {fileID: 1423962750691248354}
@@ -2747,8 +2747,6 @@ MonoBehaviour:
   levelInput: {fileID: 0}
   saveButton: {fileID: 0}
   hardcoreToggle: {fileID: 0}
-  levelTriggerOptionFreeplay: {fileID: 0}
-  levelInputFreeplay: {fileID: 0}
 --- !u!1 &1423962749801182606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,7 +3025,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962749806424855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668a0358b79c447449bf8269cef3ac5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c6096fe1df681344ae1a1367740ed1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameImage: {fileID: 1423962750513918603}
@@ -3040,8 +3038,6 @@ MonoBehaviour:
   levelInput: {fileID: 0}
   saveButton: {fileID: 0}
   hardcoreToggle: {fileID: 0}
-  levelTriggerOptionFreeplay: {fileID: 0}
-  levelInputFreeplay: {fileID: 0}
 --- !u!1 &1423962749809664694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,7 +4299,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962750047551786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668a0358b79c447449bf8269cef3ac5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c6096fe1df681344ae1a1367740ed1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameImage: {fileID: 1423962751110522831}
@@ -4316,8 +4312,6 @@ MonoBehaviour:
   levelInput: {fileID: 1423962749507446856}
   saveButton: {fileID: 1423962751213899309}
   hardcoreToggle: {fileID: 1423962750676609696}
-  levelTriggerOptionFreeplay: {fileID: 0}
-  levelInputFreeplay: {fileID: 0}
 --- !u!1 &1423962750051595675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,7 +5554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 101.8, y: 53.2}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 596.3965, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1423962750173009647
@@ -5625,8 +5619,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5816,7 +5810,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962750189282342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668a0358b79c447449bf8269cef3ac5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c6096fe1df681344ae1a1367740ed1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameImage: {fileID: 1423962750067782790}
@@ -5829,8 +5823,6 @@ MonoBehaviour:
   levelInput: {fileID: 1423962749507446856}
   saveButton: {fileID: 1423962751213899309}
   hardcoreToggle: {fileID: 1423962750676609696}
-  levelTriggerOptionFreeplay: {fileID: 0}
-  levelInputFreeplay: {fileID: 0}
 --- !u!1 &1423962750195021221
 GameObject:
   m_ObjectHideFlags: 0
@@ -7510,7 +7502,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962750343083090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d55923bb739543a47aae890c031e1152, type: 3}
+  m_Script: {fileID: 11500000, guid: 117b649939cfa2c418e566540c713d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1423962750347185045
@@ -9410,7 +9402,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962750684708198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b27372e527e5e49b104f97a4e32f99, type: 3}
+  m_Script: {fileID: 11500000, guid: cc10440befc4c7b4086658888f877f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AchievementManager: {fileID: 1423962751372230867}
@@ -9425,13 +9417,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962750684708198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f513451858ab2f8408ca556e23a3e247, type: 3}
+  m_Script: {fileID: 11500000, guid: d29022c433f127c45a97fc13f2a3e75a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   assetID: b8de4ea38156b3a4291c65228241b505
-  pipeRoomPrefab: {fileID: 0}
-  pipeDreamGenManager: {fileID: 0}
-  generator: {fileID: 0}
 --- !u!1 &1423962750691248380
 GameObject:
   m_ObjectHideFlags: 0
@@ -12317,7 +12306,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962751049212656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668a0358b79c447449bf8269cef3ac5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b4bbe443ac3d9445a01ac04f685e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameImage: {fileID: 0}
@@ -12330,8 +12319,8 @@ MonoBehaviour:
   levelInput: {fileID: 0}
   saveButton: {fileID: 0}
   hardcoreToggle: {fileID: 0}
-  levelTriggerOptionFreeplay: {fileID: 1423962751103357718}
-  levelInputFreeplay: {fileID: 1423962751429453033}
+  levelTriggerOptionFreeplay: {fileID: 0}
+  levelInputFreeplay: {fileID: 0}
 --- !u!1 &1423962751076234760
 GameObject:
   m_ObjectHideFlags: 0
@@ -13419,7 +13408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962751191143601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668a0358b79c447449bf8269cef3ac5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c6096fe1df681344ae1a1367740ed1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameImage: {fileID: 1423962750195680833}
@@ -13432,8 +13421,6 @@ MonoBehaviour:
   levelInput: {fileID: 1423962749507446856}
   saveButton: {fileID: 1423962751213899309}
   hardcoreToggle: {fileID: 1423962750676609696}
-  levelTriggerOptionFreeplay: {fileID: 0}
-  levelInputFreeplay: {fileID: 0}
 --- !u!1 &1423962751192976614
 GameObject:
   m_ObjectHideFlags: 0
@@ -13766,7 +13753,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962751213899310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff05a209989e4e4e904a3ef3bab23aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fda5744f6177ac46a229c3fc9a14231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   saveManager: {fileID: 0}
@@ -13959,7 +13946,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962751241725242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1191362ddd2caeb42acf14b8361b16b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 46016e7c4f927c44aa6c66a905fcc406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpscareToggle: {fileID: 1423962749748919439}
@@ -14950,7 +14937,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962751372230830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 046360310f11337429ebd5aa9d3da8d3, type: 3}
+  m_Script: {fileID: 11500000, guid: ae7e1779900903544b03fb00a14afbe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   achievementPrefab: {fileID: 2890876053795927792, guid: 97cba6ef4d5605e4fa9184b4c5839c71, type: 3}
@@ -16026,7 +16013,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962751443442930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e7e73d44d50545a6d0388fa24653e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c409e33ebf8795448f003e184776a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   keys: feffffff0000000001000000020000000300000004000000050000000600000007000000
@@ -17107,7 +17094,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423962751600715251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668a0358b79c447449bf8269cef3ac5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c6096fe1df681344ae1a1367740ed1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameImage: {fileID: 1423962749572041281}
@@ -17120,8 +17107,6 @@ MonoBehaviour:
   levelInput: {fileID: 0}
   saveButton: {fileID: 0}
   hardcoreToggle: {fileID: 0}
-  levelTriggerOptionFreeplay: {fileID: 0}
-  levelInputFreeplay: {fileID: 0}
 --- !u!1 &1423962751619364369
 GameObject:
   m_ObjectHideFlags: 0

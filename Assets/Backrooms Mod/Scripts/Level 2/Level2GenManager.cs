@@ -22,7 +22,9 @@ namespace Wobblyrooms.Level2
 
         [Header("Door Prefabs")]
 
-        public GameObject DoorWorking, DoorClosed, DoorWorking2;
+        public GameObject DoorWorking;
+        public GameObject DoorClosed;
+        public GameObject DoorWorking2;
 
         [Header("Door Options")]
 

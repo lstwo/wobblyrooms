@@ -1345,6 +1345,14 @@ PrefabInstance:
       propertyPath: defaultSpawnPoint
       value: 
       objectReference: {fileID: 1266611012}
+    - target: {fileID: 5958941301027785934, guid: ebea124294a0d7145b051b79528256a4, type: 3}
+      propertyPath: generationManager
+      value: 
+      objectReference: {fileID: 3632110846028703030}
+    - target: {fileID: 5958941301027785934, guid: ebea124294a0d7145b051b79528256a4, type: 3}
+      propertyPath: networkingManager
+      value: 
+      objectReference: {fileID: 1450777974}
     - target: {fileID: 7612004904104121224, guid: ebea124294a0d7145b051b79528256a4, type: 3}
       propertyPath: m_LocalPosition.y
       value: 14
@@ -1424,6 +1432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318959332}
   - component: {fileID: 1318959331}
+  - component: {fileID: 1318959333}
   m_Layer: 0
   m_Name: Directional Light (1)
   m_TagString: Untagged
@@ -1507,6 +1516,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 48.294, y: 106.946, z: 68.213}
+--- !u!114 &1318959333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318959330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac6cd8c9a03410499204fe7b92aedd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1377580122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,6 +1653,17 @@ MonoBehaviour:
   - {fileID: 4306340293152679030, guid: 74479c42a9fe9d146963bd3c2a9a9f72, type: 3}
   - {fileID: 4306340293152679030, guid: f2680387689121346b2a49f9ba4691f0, type: 3}
   - {fileID: 4306340293152679030, guid: 08e2253caa4581045aa10bb1e817b60b, type: 3}
+--- !u!114 &1450777974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7153739545273288201, guid: 3e0681bf8f3fbda49b5b7c8846b6724c, type: 3}
+  m_PrefabInstance: {fileID: 1450777971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450777972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29022c433f127c45a97fc13f2a3e75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1817263087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,7 +1691,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1817263087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ad8ac5632d67043802590733c2d1f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 644ca5723fce5b04e9178676415dbcb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1817263089
@@ -1720,7 +1752,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872057253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b59d6032b782e4481e7d62e78457f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f67e117d5597d0489e89adf215c7f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1872057255
@@ -1911,6 +1943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2094562176}
   - component: {fileID: 2094562175}
+  - component: {fileID: 2094562177}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1994,6 +2027,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &2094562177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094562174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac6cd8c9a03410499204fe7b92aedd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2112634964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2221,7 +2266,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b69afdcc9c3e541b27e6ecc4e7009e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c9f0e24111c7534db953291a623eb07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7767333837234249412

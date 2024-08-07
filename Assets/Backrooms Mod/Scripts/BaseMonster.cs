@@ -16,11 +16,8 @@ namespace Wobblyrooms
         [Tooltip("Whether entering the monsters trigger triggers the jumpscare")]
         public bool doJumpscare = true;
 
-        [Tooltip("The game object of the jumpscare ui to toggle")]
-        public GameObject jumpscare;
-
+        private GameObject jumpscare;
         private byte RPC_JUMPSCARE;
-
         private bool activated;
 
         protected override void ModRegisterRPCs(ModNetworkObject modNetworkObject)
@@ -44,11 +41,14 @@ namespace Wobblyrooms
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!Settings.jumpscares || modNetworkObject == null || !modNetworkObject.IsServer()) return;
+            Debug.Log("a");
+            if (!Settings.jumpscares || modNetworkObject == null || !modNetworkObject.IsServer() || !doJumpscare) return;
 
+            Debug.Log("b");
             if (other.tag == "Player" && !activated)
             {
                 activated = true;
+                Debug.Log("c");
                 modNetworkObject.SendRPC(RPC_JUMPSCARE, other.GetComponentInParent<ModPlayerCharacter>().modNetworkObject.GetOwner());
             }
         }
@@ -67,6 +67,7 @@ namespace Wobblyrooms
             Achievements.CompleteAchievement(9);
             Destroy(gameObject);
             jumpscare.SetActive(false);
+            activated = false;
         }
     }
 }
