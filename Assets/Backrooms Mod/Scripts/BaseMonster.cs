@@ -41,14 +41,11 @@ namespace Wobblyrooms
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("a");
             if (!Settings.jumpscares || modNetworkObject == null || !modNetworkObject.IsServer() || !doJumpscare) return;
 
-            Debug.Log("b");
             if (other.tag == "Player" && !activated)
             {
                 activated = true;
-                Debug.Log("c");
                 modNetworkObject.SendRPC(RPC_JUMPSCARE, other.GetComponentInParent<ModPlayerCharacter>().modNetworkObject.GetOwner());
             }
         }

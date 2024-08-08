@@ -43,7 +43,6 @@ namespace Wobblyrooms.MainMenu
             }
 
             GetComponent<RectTransform>().sizeDelta = new Vector2(0, 64 * completed.Count);
-            Debug.Log(GetComponent<RectTransform>().sizeDelta + "; " + completed.Count);
         }
 
         public void CompleteAchievement(int id)

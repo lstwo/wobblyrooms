@@ -128,7 +128,6 @@ namespace Wobblyrooms.MainMenu
         /// <param name="hardcore">whether the save has hardcore enabled</param>
         public static void SaveGame(GameSave save, int level, string name, int seed, bool hardcore)
         {
-            Debug.Log("SAVE GAME");
             save.level = level;
             save.name = name;
             save.seed = seed;
@@ -146,8 +145,6 @@ namespace Wobblyrooms.MainMenu
         /// <param name="other"></param>
         public static void SaveGame(GameSave save, GameSave other)
         {
-            Debug.Log("SAVE GAME");
-
             save.level = other.level;
             save.name = other.name;
             save.seed = other.seed;
@@ -164,7 +161,6 @@ namespace Wobblyrooms.MainMenu
         /// <param name="save"></param>
         public static void LoadSave(GameSave save)
         {
-            Debug.Log("LOAD SAVE");
             save.level = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_level");
             save.name = PlayerPrefs.GetString(save.pprefsKeyPrefix + "_name");
             save.hardcore = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_hardcore") == 1;
@@ -179,7 +175,6 @@ namespace Wobblyrooms.MainMenu
         /// <param name="save"></param>
         public static void UpdateSaveGet(GameSave save)
         {
-            Debug.Log("UPDATE SAVE GET");
             save.level = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_level");
             save.name = PlayerPrefs.GetString(save.pprefsKeyPrefix + "_name");
             save.seed = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_seed");
@@ -192,7 +187,6 @@ namespace Wobblyrooms.MainMenu
         /// <param name="save"></param>
         public static void UpdateSaveSet(GameSave save)
         {
-            Debug.Log("UPDATE SAVE SET");
             PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
             PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
             PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);

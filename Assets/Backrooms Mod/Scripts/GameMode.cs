@@ -33,9 +33,6 @@ namespace Wobblyrooms
 
         protected override void ModAwake()
         {
-            Debug.Log(generationManager + "asfkjhksdhdgm");
-            Debug.Log(networkingManager + "asfkjhksdhdgm");
-
             base.ModAwake();
 
             _instance = this;
@@ -46,8 +43,6 @@ namespace Wobblyrooms
 
         protected override void ModStart()
         {
-            Debug.Log(generationManager + "asfkjhksdhdgm");
-            Debug.Log(networkingManager + "asfkjhksdhdgm");
             base.ModStart();
 
             if(generationManager != null)
