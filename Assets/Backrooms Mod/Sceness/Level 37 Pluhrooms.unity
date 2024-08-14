@@ -1739,6 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: -837291180, guid: 6e425a0925819eb46aebbb35b36dabfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surface: 0
 --- !u!114 &412064823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,6 +1752,7 @@ MonoBehaviour:
   m_Script: {fileID: 1279560953, guid: 6e425a0925819eb46aebbb35b36dabfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guidString: 
 --- !u!23 &412064824
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1812,6 +1814,13 @@ MonoBehaviour:
   m_Script: {fileID: 346042026, guid: 6e425a0925819eb46aebbb35b36dabfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assetID: 
+  bAutoBoxCollider: 1
+  waterDepth: 5
+  colliderMesh: {fileID: 0}
+  waterAnchorTransform: {fileID: 412064827}
+  waterDataScriptableObject: {fileID: 0}
+  bIsDeep: 1
 --- !u!4 &412064827
 Transform:
   m_ObjectHideFlags: 0
@@ -6385,13 +6394,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1234094291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87b7f45d3cfc694ca1167a35994eb55, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d0c800ce0504ac42bd1ecb1d8e8ad20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   modPlayerControllerPrefab: {fileID: 0}
   modPlayerCharacterPrefab: {fileID: 0}
   defaultSpawnPoint: {fileID: 0}
-  playerTransform: {fileID: 0}
+  generationManager: {fileID: 0}
+  networkingManager: {fileID: 0}
+  playerControllers: []
+  playerTransforms: []
 --- !u!4 &1234094293
 Transform:
   m_ObjectHideFlags: 0

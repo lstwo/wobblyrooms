@@ -10,7 +10,7 @@ namespace Wobblyrooms
     public class AgentMonster : BaseMonster
     {
         [HideInInspector]
-        public ModPlayerCharacter player;
+        public ModPlayerController player;
 
         [Tooltip("IMPORTANT: Set to -90 for Level 6 and 3 Monster")]
         public float visualsYRotOffset;
@@ -23,39 +23,68 @@ namespace Wobblyrooms
 
         float timer = 0;
 
-        private void Start()
+        protected void Start()
+        {
+            SelectPlayerOnStart();
+        }
+
+        protected void Update()
+        {
+            HandleAgent();
+            SetRotation();
+            SetPosition();
+        }
+
+        /// <summary>
+        /// Used to select a random player on start. Override to disable or change functionality.
+        /// </summary>
+        protected void SelectPlayerOnStart()
         {
             var players = GameMode.Instance.playerControllers;
             var playerIndex = Random.Range(0, players.Count - 1);
-            player = players[playerIndex].GetPlayerCharacter();
+            player = players[playerIndex];
         }
 
-        void Update()
+        /// <summary>
+        /// Sets the agents target position.
+        /// Gets called every frame!
+        /// </summary>
+        protected void HandleAgent()
         {
             timer += Time.deltaTime;
             if (timer > 5)
             {
-                GetComponentElseChildren<NavMeshAgent>().SetDestination(player.GetPlayerPosition());
+                var agent = this.GetComponentElseChildren<NavMeshAgent>();
+
+                if (agent != null)
+                {
+                    agent.SetDestination(player.GetPlayerCharacter().GetPlayerPosition());
+                }
+
                 timer = 0;
             }
-
-            visual.LookAt(player.GetPlayerPosition());
-            visual.Rotate(Vector3.up, visualsYRotOffset);
-            visual.position = transform.position;
-            visual.Translate(Vector3.up * visualsYPosOffset);
-
-            if(lockXZRotation) visual.rotation = Quaternion.Euler(new Vector3(0, visual.rotation.y, 0));       
         }
 
-        T GetComponentElseChildren<T>()
+        /// <summary>
+        /// Sets the position of the visuals to the agent. Override for complex behaviour.
+        /// Gets called every frame!
+        /// </summary>
+        protected void SetPosition()
         {
-            if(TryGetComponent<T>(out var component))
-            {
-                return component;
-            } else
-            {
-                return GetComponentInChildren<T>();
-            }
+            visual.position = transform.position;
+            visual.Translate(Vector3.up * visualsYPosOffset);
+        }
+
+        /// <summary>
+        /// Sets the rotation to look at the player. Override for complex behaviour.
+        /// Gets called every frame!
+        /// </summary>
+        protected void SetRotation()
+        {
+            visual.LookAt(player.GetPlayerCharacter().GetPlayerPosition());
+            visual.Rotate(Vector3.up, visualsYRotOffset);
+
+            if(lockXZRotation) visual.rotation = Quaternion.Euler(new Vector3(0, visual.rotation.y, 0));
         }
     }
 }

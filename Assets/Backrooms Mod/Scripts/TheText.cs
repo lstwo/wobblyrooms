@@ -18,7 +18,7 @@ namespace Wobblyrooms
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F9))
+            if (Input.GetKeyDown(KeyCode.F4))
             {
                 GameMode.Instance.networkingManager.ServerGenSeed(true);
                 GameMode.Instance.LoadLevel(int.Parse(SceneManager.GetActiveScene().name.Split(' ')[1].Trim()));

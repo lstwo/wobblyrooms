@@ -131,7 +131,15 @@ namespace Wobblyrooms
                 else
                 {
                     int rand = Random.Range(0, roomTypes.Count);
-                    int rot = Random.Range(0, 4) * 90;
+                    float rot;
+
+                    if (bUseRandomRot)
+                        rot = Random.Range(0, 4) * 90;
+                    else
+                        rot = roomTypes[rand].transform.rotation.y;
+
+                    if (rot == 0.7071068f) rot = 90; else if (rot == 1) rot = 180; else if (rot == -0.7071068f) rot = -90f;
+
                     ModNetworkManager.Instance.InstantiateNetworkPrefab(roomTypes[rand], (go) => go.transform.SetParent(worldGrid), currentPos, Quaternion.Euler(0, rot, 0), null, true); // create the room
                 }
 
