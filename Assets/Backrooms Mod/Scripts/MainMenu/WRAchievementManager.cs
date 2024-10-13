@@ -2,15 +2,25 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UMod;
 using UnityEngine;
 
 namespace Wobblyrooms.MainMenu
 {
-    public class WRAchievementManager : MonoBehaviour
+    public class WRAchievementManager : ModScriptBehaviour
     {
+        public static IModPersistentData PersistentData { get; private set; }
+
         public GameObject achievementPrefab;
         public Achievement[] achievements;
         public LevelAchievement[] levelAchievements;
+
+        public override void OnModLoaded()
+        {
+            base.OnModLoaded();
+
+            PersistentData = ModPersistentData;
+        }
 
         public void OnEnable()
         {
@@ -82,11 +92,13 @@ namespace Wobblyrooms.MainMenu
             foreach (Achievement achievement in All) MappedToID.Add(achievement.id, achievement);
             foreach (LevelAchievement levelAchievement in LevelAchievements) MappedToLevel.Add(levelAchievement.level, levelAchievement);
 
-            if (PlayerPrefs.GetString(ACHIEVEMENTS_KEY) != "")
+            string savedString;
+
+            savedString = WRAchievementManager.PersistentData.LoadString(ACHIEVEMENTS_KEY, "");
+
+            if (savedString != "")
             {
                 Completed.Clear();
-
-                string savedString = PlayerPrefs.GetString(ACHIEVEMENTS_KEY);
 
                 string[] stringIds = savedString.Split(' ');
                 int[] ids = new int[stringIds.Length];
@@ -108,7 +120,8 @@ namespace Wobblyrooms.MainMenu
                 saveString += achievement.id + " ";
             }
 
-            PlayerPrefs.SetString(ACHIEVEMENTS_KEY, saveString.Trim());
+            WRAchievementManager.PersistentData.SaveInt("version", 1);
+            WRAchievementManager.PersistentData.SaveString(ACHIEVEMENTS_KEY, saveString.Trim());
         }
 
         public static void CompleteAchievement(int id)

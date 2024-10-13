@@ -55,30 +55,30 @@ namespace Wobblyrooms.MainMenu
 
         public static void LoadSettings()
         {
-            jumpscares = PlayerPrefs.GetInt("jumpscares") == 0;
-            ambience = PlayerPrefs.GetInt("ambience") == 0;
-            hallucinations = PlayerPrefs.GetInt("hallucinations") == 0;
+            jumpscares = GameSaveManager.PersistentData.LoadInt("jumpscares") == 0;
+            ambience = GameSaveManager.PersistentData.LoadInt("ambience") == 0;
+            hallucinations = GameSaveManager.PersistentData.LoadInt("hallucinations") == 0;
         }
 
         public static void SetJumpscares(bool b)
         {
             jumpscares = b;
-            if (b) PlayerPrefs.SetInt("jumpscares", 0);
-            else PlayerPrefs.SetInt("jumpscares", 1);
+            if (b) GameSaveManager.PersistentData.SaveInt("jumpscares", 0);
+            else GameSaveManager.PersistentData.SaveInt("jumpscares", 1);
         }
 
         public static void SetAmbience(bool b)
         {
             ambience = b;
-            if (b) PlayerPrefs.SetInt("ambience", 0);
-            else PlayerPrefs.SetInt("ambience", 1);
+            if (b) GameSaveManager.PersistentData.SaveInt("ambience", 0);
+            else GameSaveManager.PersistentData.SaveInt("ambience", 1);
         }
 
         public static void SetHallucinations(bool b)
         {
             hallucinations = b;
-            if (b) PlayerPrefs.SetInt("hallucinations", 0);
-            else PlayerPrefs.SetInt("hallucinations", 1);
+            if (b) GameSaveManager.PersistentData.SaveInt("hallucinations", 0);
+            else GameSaveManager.PersistentData.SaveInt("hallucinations", 1);
         }
 
         public static void SetEntitiesAllowed(bool b)

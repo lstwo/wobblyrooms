@@ -2,11 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UMod;
 
 namespace Wobblyrooms.MainMenu
 {
-    public class GameSaveManager : MonoBehaviour
+    public class GameSaveManager : ModScriptBehaviour
     {
+        public static IModPersistentData PersistentData { get; private set; }
+
         [Header("Game Save Info Card")]
         public Image gameImage;
         public TextMeshProUGUI gameName;
@@ -22,6 +25,13 @@ namespace Wobblyrooms.MainMenu
         public Toggle hardcoreToggle;
 
         GameSave save = new GameSave("unknown_save");
+
+        public override void OnModLoaded()
+        {
+            base.OnModLoaded();
+
+            PersistentData = ModPersistentData;
+        }
 
         private void Awake()
         {
@@ -132,10 +142,11 @@ namespace Wobblyrooms.MainMenu
             save.name = name;
             save.seed = seed;
             save.hardcore = hardcore;
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
-            PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
+
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_level", save.level);
+            GameSaveManager.PersistentData.SaveString(save.pprefsKeyPrefix + "_name", save.name);
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_seed", save.seed);
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
         }
 
         /// <summary>
@@ -149,10 +160,11 @@ namespace Wobblyrooms.MainMenu
             save.name = other.name;
             save.seed = other.seed;
             save.hardcore = other.hardcore;
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
-            PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
+
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_level", save.level);
+            GameSaveManager.PersistentData.SaveString(save.pprefsKeyPrefix + "_name", save.name);
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_seed", save.seed);
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
         }
 
         /// <summary>
@@ -175,10 +187,10 @@ namespace Wobblyrooms.MainMenu
         /// <param name="save"></param>
         public static void UpdateSaveGet(GameSave save)
         {
-            save.level = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_level");
-            save.name = PlayerPrefs.GetString(save.pprefsKeyPrefix + "_name");
-            save.seed = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_seed");
-            save.hardcore = PlayerPrefs.GetInt(save.pprefsKeyPrefix + "_hardcore") == 1;
+            save.level = GameSaveManager.PersistentData.LoadInt(save.pprefsKeyPrefix + "_level");
+            save.name = GameSaveManager.PersistentData.LoadString(save.pprefsKeyPrefix + "_name", "Unnamed Save");
+            save.seed = GameSaveManager.PersistentData.LoadInt(save.pprefsKeyPrefix + "_seed");
+            save.hardcore = GameSaveManager.PersistentData.LoadInt(save.pprefsKeyPrefix + "_hardcore") == 1;
         }
 
         /// <summary>
@@ -187,10 +199,10 @@ namespace Wobblyrooms.MainMenu
         /// <param name="save"></param>
         public static void UpdateSaveSet(GameSave save)
         {
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_level", save.level);
-            PlayerPrefs.SetString(save.pprefsKeyPrefix + "_name", save.name);
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_seed", save.seed);
-            PlayerPrefs.SetInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_level", save.level);
+            GameSaveManager.PersistentData.SaveString(save.pprefsKeyPrefix + "_name", save.name);
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_seed", save.seed);
+            GameSaveManager.PersistentData.SaveInt(save.pprefsKeyPrefix + "_hardcore", save.hardcore ? 1 : 0);
         }
 
         /// <summary>
